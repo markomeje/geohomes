@@ -31,7 +31,7 @@
                             <div class="section-tittle mt-10 mb-0">
                                 <h2>Geohomes Consultancy </h2>
                             </div>
-                            <p class="mb-30">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Fugiat voluptatem beatae facilis fugit ut error aliquam,
                             ducimus debitis quod similique. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                             Similique minima repudiandae commodi ex doloribus perferendis,

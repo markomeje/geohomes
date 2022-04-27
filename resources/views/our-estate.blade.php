@@ -7,19 +7,28 @@
       @include('layout.navbar')
     </header>
 
- <!-- Global Banner -->
-    <section class="global-banner">
-        <img src="/assets/img/materials/our-estates-banner.jpg" alt="">
-        <h2 class="container">Our Estates</h2>
-    </section>
-    <!-- Global Banner End -->
+<!--? Hero Start -->
+        <div class="slider-area2 section-bg2" data-background="https://render-vision.com/wp-content/uploads/2021/02/architekturvisualisierung_hof_niederstein_quartier_1-1083x609.jpg">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2">
+                                <h2>Portfolio</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
 
     <!-- Our Estates -->
     <section class="our-estates">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="/assets/img/materials/house01.jpg" alt="">
+                    <img src="/assets/img/post/post01.jpeg" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -35,14 +44,14 @@
                             <li><i style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
                         </ul>
 
-                        <a href="estates-detail.php" class="button hover02">Detail <i class="fa fa-caret-right"></i></a>
+                       
                     </div>
                 </div>
             </div>
 
             <div class="row flex-row-reverse mt70">
                 <div class="col-lg-6">
-                    <img src="/assets/img/materials/house01.jpg" alt="">
+                    <img src="/assets/img/post/post06.jpg" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -58,14 +67,14 @@
                             <li><i style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
                         </ul>
 
-                        <a href="estates-detail.php" class="button hover02">Detail <i class="fa fa-caret-right"></i></a>
+                       
                     </div>
                 </div>
             </div>
 
             <div class="row mt70">
                 <div class="col-lg-6">
-                    <img src="/assets/img/materials/house01.jpg" alt="">
+                    <img src="/assets/img/post/post07.jpg" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -81,14 +90,14 @@
                             <li><i style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
                         </ul>
 
-                        <a href="estates-detail.php" class="button hover02">Detail <i class="fa fa-caret-right"></i></a>
+                       
                     </div>
                 </div>
             </div>
 
             <div class="row flex-row-reverse mt70">
                 <div class="col-lg-6">
-                    <img src="/assets/img/materials/house01.jpg" alt="">
+                    <img src="/assets/img/post/post08.jpg" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -104,7 +113,7 @@
                             <li><i  style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
                         </ul>
 
-                        <a href="estates-detail.php" class="button hover02">Detail <i class="fa fa-caret-right"></i></a>
+                       
                     </div>
                 </div>
             </div>

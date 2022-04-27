@@ -1,4 +1,4 @@
- @include('layout.header')
+@include('layout.header')
 <title>GeoHomes | Our Work</title>
 </head>
 

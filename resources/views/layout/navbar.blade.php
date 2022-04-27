@@ -37,25 +37,38 @@
 
                                                 <li><a href="#">Services</a>
                                                 <ul class="submenu">
-                                                    
-                                                          <li><a href="{{ route('consultancy') }}">Consultancy</a></li>
-                                                        <li><a href="{{ route('construction') }}">Construction</a></li>
-                                                        <li><a href="{{ route('real-estate') }}">Real-Estate</a></li>
-                                                        <li><a href="https://geoprecisegroup.com/"  target="_blank">Survey</a></li>
+                                                        
+                                                          <li><a href="{{ route('consultancy') }}">Consultancy</a>
+                                                            <ul class="submenu sub-menu">
+                                                               <li><a href="{{ route('consultancy') }}">Consultancy Form</a></li>
+                                                                <li><a href="{{ route('consultancy') }}">CIS Form</a></li>  
+                                                            </ul>
+                                                          </li>
+                                                        <li><a href="{{ route('construction')}}">Construction</a></li>
+                                                        <li><a href="{{ route('real-estate') }}">Real-Estate</a>
+                                                             <ul class="submenu sub-menu">
+                                                              <li><a href="{{ route('real-estate') }}">Booking Form</a></li>
+                                                              <li><a href="{{ route('real-estate') }}">Application Form</a></li>
+                                                                <li><a href="{{ route('real-estate') }}">Property Search Form</a></li> 
+                                                                <li><a href="{{ route('real-estate') }}">CIS Form</a></li> 
+                                                                <li><a href="{{ route('real-estate') }}">Site inspection form</a></li>
+                                                            </ul>
+                                                          </li>
+                                                        <li><a href="https://geoprecisegroup.com/service/cadastral-land-survey/"  target="_blank">Survey</a>
+                                                            <ul class="submenu sub-menu">
+                                                               <li><a href="{{ route('consultancy') }}">Lifting Form</a></li>
+                                                                <li><a href="{{ route('consultancy') }}">Site Inspection Form</a></li>  
+                                                            </ul>
+                                                          </li>
                                                         
                                                     </ul>
                                                     
                                                 </li>
 
-                                                <li><a href="#">Portfolio</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="{{ route('our-estate') }}">Our Estates</a></li>
-                                                        <li><a href="{{ route('our-work') }}">Our Works</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li><a href="{{ route('our-estate') }}">Portfolio</a></li>
                                         
-                                                        <li><a href="{{ route('blog') }}">Bolg</a></li>
-                                                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                                                <li><a href="{{ route('blog') }}">Blog</a></li>
+                                                <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                         
                                                 
                                                 <li><a href="{{ route('affiliate') }}">Affiliate</a></li>
