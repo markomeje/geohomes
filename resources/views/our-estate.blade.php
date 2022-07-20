@@ -1,5 +1,5 @@
   @include('layout.header')
-<title>GeoHomes | Estate</title>
+<title>GeoHomes | Shop</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2">
-                                <h2>Portfolio</h2>
+                                <h2>Shop</h2>
                             </div>
                         </div>
                     </div>
@@ -24,101 +24,63 @@
         <!-- Hero End -->
 
     <!-- Our Estates -->
-    <section class="our-estates">
-        <div class="container">
+    <div class="categories-area section-padding40">
+            <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <img src="/assets/img/post/post01.jpeg" alt="">
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="text">
-                        <h4>Villa</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consectetur dolores veritatis reiciendis harum dicta suscipit. Temporibus quo pariatur tempore accusamus error ipsam illo sunt sit, dolore voluptatum repudiandae perspiciatis explicabo culpa quos, iusto a libero cum consectetur atque molestias impedit blanditiis. Quasi, dicta molestias sit fugit necessitatibus dignissimos nam.</p>
-                        <ul>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i> 5 bedrooms Villa (Oak) - 49 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms Terrace (Acacia) - 52 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>3 bedrooms apartment (Maple) - 54 units </li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms penthouse - 5 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>Land size: 4.32 ha.</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
-                        </ul>
-
-                       
+                 @if(empty($portifolio))
+                      <div class="alert alert-warning col-lg-12 text-center">
+                        <strong>No Content Available Yet.</strong>
+                      </div>
+                     @else
+                 @foreach($portifolio as $row)
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                  <div class="card mb-40" style="border-radius: 40px; box-shadow: 20px black">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-6 col-sm-12">
+                      <img src="{{ asset('assets/upload/portifolio_images/'.$row->image) }}" class="img-fluid rounded-start h-100" alt="..." style="object-fit: center; border-radius: 40px 0px 0px 40px; border-color: gainsboro;">
                     </div>
-                </div>
-            </div>
-
-            <div class="row flex-row-reverse mt70">
-                <div class="col-lg-6">
-                    <img src="/assets/img/post/post06.jpg" alt="">
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="text ml0 mr45">
-                        <h4>Oak</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consectetur dolores veritatis reiciendis harum dicta suscipit. Temporibus quo pariatur tempore accusamus error ipsam illo sunt sit, dolore voluptatum repudiandae perspiciatis explicabo culpa quos, iusto a libero cum consectetur atque molestias impedit blanditiis. Quasi, dicta molestias sit fugit necessitatibus dignissimos nam.</p>
-                        <ul>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i> 5 bedrooms Villa (Oak) - 49 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms Terrace (Acacia) - 52 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>3 bedrooms apartment (Maple) - 54 units </li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms penthouse - 5 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>Land size: 4.32 ha.</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
-                        </ul>
-
-                       
+                    <div class="col-md-6 col-lg-6 col-sm-12">
+                      <div class="card-body">
+                        <h5 class="card-title" style="font-size: 1.8em">{{$row->title }}</h5>
+                        <p class="card-text" style="font-size: 1.2em">{{$row->product }}</p>
+                        <div class="card-text">
+                            <h3><u>Description</u></h3>
+                            <p>{{Str::limit($row->features), 70 }}</p>
+                        </div>
+                      <div class="row mt-4">
+                      <div class="col-lg-6 col-sm-6 col-md-6">
+                     <small  style="font-size: 1.2em; color: black;">&#8358 {{$row->price}}</small>
                     </div>
-                </div>
-            </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6 ">
+                     <small class="text-muted"><i class="fa fa-map-marker  " aria-hidden="true" style="font-size: 1.2em">   {{$row->location }}</i></small>
+                      </div>
+                        </div>
+                            </div>
+                                </div> 
+                            </div>
+                         </div>
+                        </div> 
+                          @endforeach
+                         @endif
+                             </div>
+                             <div class="col-lg-12 mt-40">
+                              <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        
+                                    {{ $portifolio->links('vendor.pagination.default') }}
+                                    
+                                   </li>
+                                </ul>
+                            </nav>
+                           
+                        </div>
+                         </div>
+                     </div>
 
-            <div class="row mt70">
-                <div class="col-lg-6">
-                    <img src="/assets/img/post/post07.jpg" alt="">
-                </div>
 
-                <div class="col-lg-6">
-                    <div class="text">
-                        <h4>Oakville</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consectetur dolores veritatis reiciendis harum dicta suscipit. Temporibus quo pariatur tempore accusamus error ipsam illo sunt sit, dolore voluptatum repudiandae perspiciatis explicabo culpa quos, iusto a libero cum consectetur atque molestias impedit blanditiis. Quasi, dicta molestias sit fugit necessitatibus dignissimos nam.</p>
-                        <ul>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i> 5 bedrooms Villa (Oak) - 49 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms Terrace (Acacia) - 52 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>3 bedrooms apartment (Maple) - 54 units </li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms penthouse - 5 units</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>Land size: 4.32 ha.</li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
-                        </ul>
 
-                       
-                    </div>
-                </div>
-            </div>
-
-            <div class="row flex-row-reverse mt70">
-                <div class="col-lg-6">
-                    <img src="/assets/img/post/post08.jpg" alt="">
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="text ml0 mr45">
-                        <h4>Acacia</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consectetur dolores veritatis reiciendis harum dicta suscipit. Temporibus quo pariatur tempore accusamus error ipsam illo sunt sit, dolore voluptatum repudiandae perspiciatis explicabo culpa quos, iusto a libero cum consectetur atque molestias impedit blanditiis. Quasi, dicta molestias sit fugit necessitatibus dignissimos nam.</p>
-                        <ul>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i> 5 bedrooms Villa (Oak) - 49 units</li>
-                            <li><i  style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms Terrace (Acacia) - 52 units</li>
-                            <li><i style="color: #0EA15F" style="color: #0EA15F" class="fa fa-home"></i>3 bedrooms apartment (Maple) - 54 units </li>
-                            <li><i style="color: #0EA15F" class="fa fa-home"></i>4 bedrooms penthouse - 5 units</li>
-                            <li><i  style="color: #0EA15F" class="fa fa-home"></i>Land size: 4.32 ha.</li>
-                            <li><i  style="color: #0EA15F" class="fa fa-home"></i>Location: Plot No. 132, cadastral zone Bo3, Wuye District</li>
-                        </ul>
-
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+       
     <!-- Our Estates End -->
 
       @include('layout.footer')

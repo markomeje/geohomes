@@ -1,112 +1,32 @@
-       <div class="container-fluid">
-        <section class="Map-area">
-            <div class="d-none d-sm-block">
-<div class="gmap_canvas"><iframe width="2000" height="436" id="gmap_canvas" 
-src="https://maps.google.com/maps?q=Geohomes%20Services%20Limited,%20Suit%20E01b,%20The%20Statement%20Complex,%20Plot%201002%20First%20Ave,%20Wuse%20400001,%20Abuja&t=&z=15&ie=UTF8&iwloc=&output=embed"
-frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-</iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:436px;width:1080px;}
-</style>
-<style>.gmap_canvas {overflow:hidden;background:gray!important;height:436px;width:2000px;}
-</style>
-</div>
-</div>
+        <div class="container-fluid">
+                    <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="map-responsive mt-2 ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4685.4524824850705!2d7.49220912261883!3d9.06556817568892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a301634bc385%3A0x7c0e0c2767a0f6d!2sGeohomes%20Services%20Limited!5e0!3m2!1sen!2sng!4v1651144717487!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </section>
         </div>
-                <script>
-                    function initMap() {
-                        var uluru = {
-                            lat: -25.363,
-                            lng: 131.044
-                        };
-                        var grayStyles = [{
-                                featureType: "all",
-                                stylers: [{
-                                        saturation: -90
-                                    },
-                                    {
-                                        lightness: 50
-                                    }
-                                ]
-                            },
-                            {
-                                elementType: 'labels.text.fill',
-                                stylers: [{
-                                    color: '#ccdee9'
-                                }]
-                            }
-                        ];
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            center: {
-                                lat: -31.197,
-                                lng: 150.744
-                            },
-                            zoom: 9,
-                            styles: grayStyles,
-                            scrollwheel: false
-                        });
-                    }
-                </script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
-                </script>
-            </div>
-        </section>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="map-responsive mt-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.646824983353!2d7.492906450671298!3d6.439381725898378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a3d8f51f6071%3A0x6b07f5ee68d7e660!2s26%20Moorehouse%20St%2C%20Ogui%20400001%2C%20Enugu!5e0!3m2!1sen!2sng!4v1651311872154!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+        </div>
+        </div>
         <!-- Map Area End -->
-        <!-- Want To work 2-->
-        <section class="wantToWork-area">
-            <div class="container">
-                <div class="wants-wrapper w-padding3">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="wantToWork-caption wantToWork-caption2">
-                                <div class="logo">
-                                    <img src="assets/img/logo/logo-main.png" alt="" style="width:240px;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8">
-                            <div class="double-btn f-right ">
-                                <a href="#" class="btn2 w-btn wantToWork-btn" style="color:#0EA15F">Learn More <i class="ti-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Want To work End 2-->
     </main>
     <footer>
         <!-- Footer Start-->
         <div class="footer-area footer-padding">
-            <div class="container">
+            <div class="container ">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                 <h4>Company</h4>
-                                 <ul>
-                                   <li><a href="{{route('about')}}">About</a></li>
-                                    <li><a href="{{route('gallery')}}">Projects</a></li>
-                                    <li><a href="{{route('blog')}}">Blog</a></li>
-                                    <li><a href="{{route('affiliate')}}">Affiliate</a></li>
-                                </ul>
-                            </div>
+                            <div class="">
+                                    <img src="assets/img/logo/logo-main.png" alt="" style="width:250px;">
+                                </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Services</h4>
-                                <ul>
-                                    <li><a href="{{route('consultancy')}}">Consultancy</a></li>
-                                    <li><a href="{{route('real-estate')}}">Estates</a></li>
-                                    <li><a href="{{route('construction')}}">Construction</a></li>
-                                    <li><a href="https://geoprecisegroup.com/service/cadastral-land-survey/">survey</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Contact Us</h4>
@@ -116,11 +36,33 @@ frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                                 </div>
                             </div>
                             <div class="footer-number">
-                                <p>Phone: +10 783 3674 356</p>
-                                <p>Email: info@geohome.com</p>
+                                <p style="color:black;">Abuja: +234 806 0545 860</p>
+                                <p style="color:black;">Enugu: +234 906 2972 785</p>
+
+                                <p style="color:black;">Email: info@geohomesgroup.com</p>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="{{ route('real-estate') }}">Real Estate</a></li>
+                                    <li><a href="{{ route('constructions') }}">Construction</a></li>
+                                    <li><a href="{{route('energys')}}">Energy</a></li>
+                                    <li><a href="{{route('logistics')}}">Logistic Services</a></li>
+                                    <li><a href="{{ route('medicals') }}">Medical Services</a></li>
+                                    <li><a href="{{ route('minerals') }}">Mineral Production</a></li>
+                                    <li><a href="{{ route('agricultures') }}">Agriculture</a></li>
+                                    <li><a href="{{ route('consultancy') }}">Consultancy</a></li>
+                                    <li><a href="https://geoprecisegroup.com"  target="_blank">Land Surveying</a></li>
+                                    <li><a href="https://bestpropertymarket.com/"  target="_blank">Best Property Market</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle mb-50">
@@ -130,14 +72,27 @@ frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                             <!-- Form -->
                             <div class="footer-form">
                                 <div id="mc_embed_signup">
-                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                    <form action="#" Method="POST" class="subscribe_form relative mail_part" novalidate="true">
+                                    
+                                        <input type="email" name="email" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
                                         <div class="form-icon">
-                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm" style="background-color: #0EA15F;">
+                                            <button type="submit" style="background-color: #0EA15F;">
                                                 Subscribe
                                             </button>
                                         </div>
-                                        <div class="mt-10 info"></div>
+                                        <!-- it gives feedback messages -->
+                                   @if($message = Session::get('success'))
+                                   <div class="alert ">
+                                   <p style="color:#0EA10F;">{{$message}}</p>
+                                    </div>
+                                    @endif
+
+                                    @if($message = Session::get('error'))
+                                    <div class="alert ">
+                                    <p style="color:red;">{{$message}}</p>
+                                    </div>
+                                    @endif
+                                    <!-- feedback message ends here -->
                                     </form>
                                 </div>
                             </div>
@@ -193,8 +148,7 @@ frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+   
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
     <script src="./assets/js/owl.carousel.min.js"></script>
@@ -212,6 +166,8 @@ frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
     <!-- Progress -->
     <script src="./assets/js/jquery.barfiller.js"></script>
     
+     <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
     <!-- counter , waypoint,Hover Direction -->
     <script src="./assets/js/jquery.counterup.min.js"></script>
     <script src="./assets/js/waypoints.min.js"></script>
@@ -219,7 +175,6 @@ frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
     <script src="./assets/js/hover-direction-snake.min.js"></script>
 
     <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/jquery.form.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
