@@ -3,7 +3,10 @@
 </head>
 <body>
     
-     <!-- ? Preloader Start -->
+    <!-- Header -->
+      @include('layout.navbar')
+    </header>
+     <!-- ? Preloader Start 
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -14,11 +17,7 @@
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
-    <!-- Header -->
-      @include('layout.navbar')
-    </header>
-
+   Preloader Start -->
     <main>
         <!--? slider Area Start-->
         <div class="slider-area position-relative">
@@ -31,6 +30,7 @@
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">Exquisite Homes <span> With Premium Comfort</span>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">Move to What Moves You.</p>
+                                   <a href="{{route('our-estate')}}" class="btn hero-btn mt-0" style="background:#0EA15F;" >Get A Land <i class="ti-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                     <div class="col-xl-5 col-lg-6 col-md-9 offset-md-1 offset-sm-1">
                         <div class="about-right-cap">
                             <div class="about-right-img">
-                                <img id="image_change" src="/assets/img/materials/house02.jpg" alt="" onclick="stop();">
+                                <img class="img-fluid img-responsive" id="image_change" src="/assets/img/materials/house02.jpg" alt="" onclick="stop();">
                             </div>
                             <div class="img-cap" style="background-color:#0EA15F;">
                                 <span >20</span>
@@ -214,11 +214,11 @@
                                <div class="single-man-slider">
                        <div class="man-slider-active">
                         <div class="single-mam-img">
-                        <img style="height: 400px;" class="gallery-img  w-100" src="/assets/img/currently-selling/sell01.jpg"> </div>
+                        <img class="img-fluid img-responsive" style="height: 400px;" class="gallery-img  w-100" src="/assets/img/currently-selling/sell01.jpg"> </div>
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell02.jpg"></div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell02.jpg"></div>
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell04.jpg"></div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell04.jpg"></div>
                         </div>
                          </div>
                             </div>
@@ -230,11 +230,11 @@
                                  <div class="single-man-slider">
                        <div class="man-slider-active">
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell03.jpg"> </div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell03.jpg"> </div>
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell05.jpg"></div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell05.jpg"></div>
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell07.jpg"></div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell07.jpg"></div>
                         </div>
                     </div>
                             </div>
@@ -246,9 +246,9 @@
                                  <div class="single-man-slider">
                        <div class="man-slider-active">
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell08.jpg"></div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell08.jpg"></div>
                         <div class="single-mam-img">
-                        <img style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell09.jpg"></div>
+                        <img class="img-fluid img-responsive" style="height: 400px;"  class="gallery-img  w-100" src="/assets/img/currently-selling/sell09.jpg"></div>
                         </div>
                     </div>
                             </div>
@@ -316,16 +316,16 @@
                         <div class="single-man-slider">
                             <div class="man-slider-active">
                                 <div class="single-mam-img">
-                                    <img src="assets/img/gallery/man1.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/gallery/man1.png" alt="">
                                 </div>
                                 <div class="single-mam-img">
-                                    <img src="assets/img/gallery/man1.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/gallery/man1.png" alt="">
                                 </div>
                                 <div class="single-mam-img">
-                                    <img src="assets/img/gallery/man1.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/gallery/man1.png" alt="">
                                 </div>
                                 <div class="single-mam-img">
-                                    <img src="assets/img/gallery/man1.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/gallery/man1.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -407,11 +407,11 @@
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/home-blog1.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxery3.jpg" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>22 Apr 2020</p>
-                                    <h3><a href="{{ route('blogs') }}">We might track your usage patterns to see</a></h3>
+                                    <h3><a href="{{ route('blogs') }}">Real Estate Developement</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -420,11 +420,11 @@
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/home-blog2.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxury-real-estate.jpg" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>22 Apr 2020</p>
-                                    <h3><a href="{{ route('blogs') }}">The massive stadium screens at the MCG</a></h3>
+                                    <h3><a href="{{ route('blogs') }}">Customer's Satisfaction</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -434,7 +434,9 @@
         </section>
         <!-- Blog Area End -->
 
-   <script type="text/javascript">
+
+ @include('layout.footer')
+    <script type="text/javascript">
     /* experience image changing code */
             var myImage = document.getElementById("image_change");
 
@@ -461,11 +463,8 @@ function stop(){
 }
 /*experience image changing code */
         </script>
-         <!-- About Section 01 End -->\
+         <!-- About Section 01 End -->
 
-
-
- @include('layout.footer')
 
     
 </body>
