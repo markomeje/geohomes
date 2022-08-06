@@ -669,6 +669,7 @@
           <h6 class="font-weight-bolder mb-0 ">Dashboard</h6>
         </nav>
       </div>
+     
         <div class="container-fluid py-1 px-3 d-flex align-items-center">
           <button type="button" class="btn  btn-sm mb-0 shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" style=" border:3px solid black; color:#0EA15F;"><i class="fa fa-user me-sm-1"></i>Add User</button>
         
