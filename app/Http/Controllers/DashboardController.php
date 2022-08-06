@@ -23,7 +23,8 @@ class DashboardController extends Controller
           $inpectionCount = DB::table('siteinspections')->count(),
           $propertysearchCount = DB::table('propertysearchs')->count(),
           $contactCount = DB::table('contacts')->count(),
+          $userCount = DB::table('users')->count(),
          ];
-        return view('dashboard', compact('applicationCount', 'cisCount','bookingCount','consultantCount','affiliateCount','inpectionCount','propertysearchCount','contactCount'));
+        return view('dashboard', compact('applicationCount', 'cisCount','bookingCount','consultantCount','affiliateCount','inpectionCount','propertysearchCount','contactCount','userCount'));
     }
 }

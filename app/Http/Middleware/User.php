@@ -2,10 +2,9 @@
 
 namespace App\Http\Middleware;
 use Illuminate\Http\Request;
-use App\Models\User;
 use Closure;
 
-class Manager
+class User
 {
     /**
      * Handle an incoming request.
@@ -16,7 +15,7 @@ class Manager
      */
     public function handle(Request $request, Closure $next)
     {
-        if('manager' === auth()->user()->role){
+        if('user' === auth()->user()->role){
             return $next($request);
         }
 

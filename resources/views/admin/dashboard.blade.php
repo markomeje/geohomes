@@ -21,8 +21,31 @@
              </div>
              @endif
              <!-- feedback message ends here -->
+        @if('admin' === auth()->user()->role)
+        <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
+          <a href="{{ route('viewuser')}}">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
 
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">View Users</p>
+                    <h5 class="font-weight-bolder mb-0 text-success">{{$userCount}}</h5>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape shadow text-center border-radius-md" style="background-color:#0EA15F !important;">
+                    <i class="fa fa-user text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+        @endif
+        <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
           <a href="{{ route('application')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -44,7 +67,7 @@
           </div>
           </a>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
           <a href="{{ route('booking')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -67,7 +90,7 @@
           </div>
           </a>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
           <a href="{{ route('cis')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -90,7 +113,7 @@
           </div>
           </a>
         </div>
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-2 col-sm-2">
           <a href="{{ route('consultant')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -116,7 +139,7 @@
       </a>
     </div>
       <div class="row mt-4">
-         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+         <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
           <a href="{{ route('affiliates')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -137,7 +160,7 @@
           </div>
           </a>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
           <a href="{{ route('inspection')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -160,7 +183,7 @@
           </div>
           </a>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="col-xl-2 col-sm-2 mb-xl-0 mb-4">
           <a href="{{ route('property')}}">
           <div class="card">
             <div class="card-body p-3">
@@ -183,7 +206,7 @@
           </div>
           </a>
         </div>
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-2 col-sm-2">
           <a href="{{ route('contacts')}}">
             <div class="card">
             <div class="card-body p-3">

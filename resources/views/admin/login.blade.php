@@ -51,9 +51,9 @@
                       <button type="submit" class="btn w-100 mt-4 mb-0" style="background-color:#0EA10F !important; color:black;">Sign in</button>
                     </div>
                   </form>
-                  <div class="col-12 d-flex justify-content-center mt-4">
+                  <!--<div class="col-12 d-flex justify-content-center mt-4">
                   <p><u><a href="{{route('passwordreset')}}">Reset Password</a></u></p>
-                </div>
+                </div>-->
                 </div>
               </div>
             </div>

@@ -11,8 +11,11 @@ class AddAboutController extends Controller
 {
     //
 
+
+
      public function admin()
     {
+        
         return view('addabout');
     }
 

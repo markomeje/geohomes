@@ -492,6 +492,7 @@
         </li>
       </div>
     </div>
+    @if('admin' === auth()->user()->role)
     <div class="dropdown">
          <li class="nav-item">
           <a class="nav-link  " href="#">
@@ -636,6 +637,7 @@
         </li>
         </div>
       </div>
+      @endif
          <li class="nav-item">
           <a class="nav-link  " href="{{route('logout')}}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -669,11 +671,12 @@
           <h6 class="font-weight-bolder mb-0 ">Dashboard</h6>
         </nav>
       </div>
-     
+     @if('admin' === auth()->user()->role)
         <div class="container-fluid py-1 px-3 d-flex align-items-center">
           <button type="button" class="btn  btn-sm mb-0 shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" style=" border:3px solid black; color:#0EA15F;"><i class="fa fa-user me-sm-1"></i>Add User</button>
         
       </div>
+     @endif
         <div class="container-fluid py-1 px-3 d-flex align-items-center">
             <li class=" d-flex align-items-center">
               <a class="btn  btn-sm mb-0 me-3"  target="_blank" href="https://geohomesgroup.com" style=" border:3px solid #0EA15F; color: black;">website</a>

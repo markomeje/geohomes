@@ -62,6 +62,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
    Route::get('/agricultures', [App\Http\Controllers\AgricultureController::class, 'index'])->name('agricultures');
    Route::get('/minerals', [App\Http\Controllers\MineralController::class, 'index'])->name('minerals');
    Route::get('/medicals', [App\Http\Controllers\MedicalController::class, 'index'])->name('medicals');
+
 });
 
 /* Admin Area */
@@ -98,10 +99,10 @@ Route::middleware(['web','auth','manager'])->domain(env('APP_URL'))->group(funct
 
    Route::get('/admin/blog', [App\Http\Controllers\BlogTableController::class, 'admin'])->name('blog');
    Route::get('/admin/blogpost', [App\Http\Controllers\BlogPostController::class, 'admin'])->name('blogpost');
-   Route::get('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('/admin/login');
 });
 
 Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(function() {
+   Route::get('/admin/viewuser', [App\Http\Controllers\UserController::class, 'admin'])->name('viewuser');
    Route::post('/admin/adduser', [App\Http\Controllers\ValidationController::class, 'adduser'])->name('adduser');
    Route::post('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
    Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'admin'])->name('dashboard');
@@ -156,7 +157,7 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
    Route::post('/admin/inspection/{id}', [App\Http\Controllers\SiteInspectionTableController::class, 'delete'])->name('delete');
    Route::post('/admin/propertysearch/{id}', [App\Http\Controllers\PSRTableController::class, 'delete'])->name('delete');
    Route::post('/admin/booking/{id}', [App\Http\Controllers\BookingTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/contact/{id}', [App\Http\Controllers\ContactTableController::class, 'delete'])->name('deletes');
+   Route::post('/admin/contact/{id}', [App\Http\Controllers\ContactTableController::class, 'delete'])->name('delete');
    Route::post('/admin/blogpost/{id}', [App\Http\Controllers\BlogTableController::class, 'delete'])->name('delete');
    Route::post('/admin/portifolio/{id}', [App\Http\Controllers\PortifolioController::class, 'delete'])->name('delete');
    Route::post('/admin/constructiontable/{id}', [App\Http\Controllers\ConstructionTableController::class, 'delete'])->name('delete');
@@ -239,18 +240,6 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
 
 
 
-   /* Posting of forms */
-   Route::post('/affiliate',[App\Http\Controllers\AffiliateController::class, 'AffiliateInsert'])->name('affiliate');
-   Route::post('/consultants-form',[App\Http\Controllers\ConsultantsFormController::class, 'ConsultantsInsert'])->name('consultants-form');
-
-   Route::post('/cis-form',[App\Http\Controllers\CisFormController::class, 'CisInsert'])->name('cis-form');
-   Route::post('/book-inspection',[App\Http\Controllers\BookInspectionController::class, 'BookingsInsert'])->name('book-inspection');
-
-   Route::post('/site-form',[App\Http\Controllers\SiteFormController::class, 'SiteInsert'])->name('site-form');
-   Route::post('/contact',[App\Http\Controllers\ContactController::class, 'ContactInsert'])->name('contact');
-
-   Route::post('/application-form',[App\Http\Controllers\ApplicationController::class, 'ApplicationInsert'])->name('application-form');
-   Route::post('/property-form', [App\Http\Controllers\PropertySearchController::class, 'PropertyInsert'])->name('property-form');
    Route::post('/admin/blogpost', [App\Http\Controllers\BlogPostController::class, 'BlogInsert'])->name('blogpost');
 
    Route::post('/', [App\Http\Controllers\HomeController::class, 'NewsInsert'])->name('home');
@@ -278,6 +267,33 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
 
    Route::post('/admin/applicationforms',[App\Http\Controllers\AdminApplicationController::class, 'ApplicationInsert'])->name('applicationforms');
    Route::post('/admin/propertyform', [App\Http\Controllers\AdminPropertySearchController::class, 'AdminPropertyInsert'])->name('propertyform');
+});
+
+Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
+    if (auth()->check()) {
+        $role = auth()->user()->role;
+        switch ($role) {
+            case 'manager':
+                $sudomain = 'manager';
+                break;
+            default:
+                $sudomain = 'admin';
+                break;
+        }
+
+        return redirect()->route("{$sudomain}.dashboard");
+    }
+
+    return redirect()->route('home');
+
+})->name('dashboard');
+
+Route::fallback(function () {
+    Route::middleware(['web'])->domain('https://www.geohomesgroup.com')->group(function () {
+        Route::get('/', [HomeController::class, 'index'])->name('home');
+    });
+
+    return redirect()->route('home');
 });
 
 
