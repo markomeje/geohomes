@@ -110,7 +110,7 @@
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-xl-9 col-lg-8">
                             <div class="footer-copy-right">
-                                <p> ©2022 Geohomes.com  | All rights reserved.</p>
+                                <p> ©2022 geohomesgroup.com  | All rights reserved.</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4">
