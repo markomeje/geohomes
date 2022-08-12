@@ -65,7 +65,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
 });
 
 /* Admin Area */
-Route::middleware(['web'])->domain(env('ADMIN_URL'))->group(function() {
+Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/admin/login', [App\Http\Controllers\LoginController::class, 'admin'])->name('login');
   Route::get('/admin/passwordreset', [App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('passwordreset');
   Route::post('/admin/passwordreset', [App\Http\Controllers\ResetPasswordController::class, 'passwordreset'])->name('passwordreset');
@@ -100,7 +100,7 @@ Route::middleware(['web','auth','manager'])->domain(env('APP_URL'))->group(funct
    Route::get('/admin/blogpost', [App\Http\Controllers\BlogPostController::class, 'admin'])->name('blogpost');
 });
 
-Route::middleware(['web','auth','admin'])->domain(env('ADMIN_URL'))->group(function() {
+Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(function() {
    Route::get('/admin/viewuser', [App\Http\Controllers\UserController::class, 'admin'])->name('viewuser');
    Route::post('/admin/adduser', [App\Http\Controllers\ValidationController::class, 'adduser'])->name('adduser');
    Route::post('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
