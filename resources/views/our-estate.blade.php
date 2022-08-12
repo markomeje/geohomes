@@ -37,7 +37,7 @@
                   <div class="card mb-40" style="border-radius: 40px; box-shadow: 20px black">
                   <div class="row">
                     <div class="col-md-6 col-lg-6 col-sm-12">
-                      <img src="{{ asset('assets/upload/portifolio_images/'.$row->image) }}" class="img-fluid rounded-start h-100" alt="..." style="object-fit: center; border-radius: 40px 0px 0px 40px; border-color: gainsboro;">
+                      <img src="{{ asset('assets/upload/portifolio_images/'.$row->image) }}" class="img-fluid rounded-start h-100" alt="..." style="object-fit: center; border-radius: 40px; border-color: gainsboro;">
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-12">
                       <div class="card-body">
