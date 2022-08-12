@@ -65,7 +65,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
 });
 
 /* Admin Area */
-Route::middleware(['web', 'guest'])->domain(env('APP_URL'))->group(function() {
+Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/admin/login', [App\Http\Controllers\LoginController::class, 'admin'])->name('login');
   Route::get('/admin/passwordreset', [App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('passwordreset');
   Route::post('/admin/passwordreset', [App\Http\Controllers\ResetPasswordController::class, 'passwordreset'])->name('passwordreset');
