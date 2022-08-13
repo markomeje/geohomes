@@ -34,7 +34,6 @@
                 <small class="text-danger">{{$errors->first('password') }}</small>
 
                   <form role="form" method="POST" action="{{route('passwordreset')}}" id="admin_form">
-                    {{ csrf_field()}}
                         
                     <label>Email</label>
                     <div class="mb-3">
@@ -51,7 +50,7 @@
                       <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="password-addon" name="password_confirmation" required="password">
                     </div> -->
                     <div class="text-center">
-                      <button type="submit" class="btn w-100 mt-4 mb-0" style="background-color:#0EA10F !important; color:black;">Reset</button>
+                      <button type="submit" class="btn w-100 mt-4 mb-0" style="background-color:#0EA10F !important; color:black;">Send Link</button>
                     </div>
                   </form>
                    <div class="col-12 d-flex justify-content-center mt-4">
