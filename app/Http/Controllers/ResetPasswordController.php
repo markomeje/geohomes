@@ -40,10 +40,10 @@ class ResetPasswordController extends Controller
         $request->only('email')
     );
     if ($status) {
-        return redirect()->back()->with('success', 'password reset link has been sent to your email. thank you.')
+        return redirect()->back()->with('success', 'password reset link has been sent to your email. thank you.');
     }
     else{
-       return redirect()->back()->with('error', 'A network Error occurred.please try again')
+       return redirect()->back()->with('error', 'A network Error occurred.please try again');
     }
     return $status === Password::RESET_LINK_SENT
                 ? back()->with(['status' => __($status)])
