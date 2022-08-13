@@ -20,12 +20,10 @@ class ResetPasswordController extends Controller
         return view('password.reset_password_link');
     }
 
-
      public function newPasswordForm($token)
     {
         return view('password.reset_password', ['token' => $token]);
     }
-
 
  //sending password reset link
     public function sendPasswordResetLink(Request $request){
@@ -37,52 +35,50 @@ class ResetPasswordController extends Controller
         if ($user == null) {
             return redirect()->back()->with(['error'=>'Sorry, the Email Address does not exist.']);
         }
+ 
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+    if ($status) {
+        return redirect()->back()->with('success', 'password reset link has been sent to your email. thank you.')
+    }
+    else{
+       return redirect()->back()->with('error', 'A network Error occurred.please try again')
+    }
+    return $status === Password::RESET_LINK_SENT
+                ? back()->with(['status' => __($status)])
+                : back()->withErrors(['email' => __($status)]);
 
-        else{  
-
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
-        
-        if ($status) {
-            return redirect()->back()->with('success', 'password reset link has been sent to your email. thank you.');
-        }
-
-        else{
-           return redirect()->back()->with('error', 'A network Error occurred.please try again');
-        }
-
-         }
     }
 
 
-        //Saving the new password in Database
+    //Saving the new password in Database
 
-         public function Resetpassword(Request $request){
-              $request->validate([
-            'token' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed',
-        ]);
-     
-        $status = Password::reset(
-            $request->only('email', 'password', 'password_confirmation', 'token'),
-            function ($user, $password) {
-                $user->forceFill([
-                    'password' => Hash::make($password)
-                ])->setRememberToken(Str::random(60));
-     
-                $user->save();
-     
-                event(new PasswordReset($user));
-            }
-        );
-     
-        return $status === Password::PASSWORD_RESET
-                    ? redirect()->route('login')->with('status', __($status))
-                    : back()->withErrors(['email' => [__($status)]]);
-
+     public function Resetpassword(Request $request){
+          $request->validate([
+        'token' => 'required',
+        'email' => 'required|email',
+        'password' => 'required|confirmed',
+    ]);
+ 
+    $status = Password::reset(
+        $request->only('email', 'password', 'password_confirmation', 'token'),
+        function ($user, $password) {
+            $user->forceFill([
+                'password' => Hash::make($password)
+            ])->setRememberToken(Str::random(60));
+ 
+            $user->save();
+ 
+            event(new PasswordReset($user));
         }
+    );
+ 
+    return $status === Password::PASSWORD_RESET
+                ? redirect()->route('login')->with('status', __($status))
+                : back()->withErrors(['email' => [__($status)]]);
+
+    }
 
 /*    $schedule->command('auth:clear-resets')->everyFifteenMinutes();*/
 
