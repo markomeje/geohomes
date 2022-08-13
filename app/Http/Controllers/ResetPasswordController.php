@@ -14,6 +14,7 @@ use Auth;
 use DB;
 use Hash;
 
+
 class ResetPasswordController extends Controller
 {
 
@@ -22,17 +23,15 @@ class ResetPasswordController extends Controller
         return view('reset_password');
     }
 
+ 
+    public function passwordreset(Request $request){
+        $user =User::whereEmail($request->email)->first();
 
-    Public function passwordreset(Request $request) {
-
-       //You can add validation login here
-        $user = DB::table('users')->where('email', '=', $request->email)->first();
-
-        //Check if the user exists
-        if(empty($user))  {
-            return redirect()->back()->withErrors(['email' => trans('Sorry, Email does not exist')]);
+        if ($user == null) {
+            return redirect()->back()->with(['error'=>'Sorry, the Email Address does not exist.']);
         }
-        else{
+
+        
         //Create Password Reset Token
         DB::table('password_resets')->insert([
             'email' => $request->email,
@@ -40,18 +39,22 @@ class ResetPasswordController extends Controller
             'created_at' => Carbon::now()
         ]);
         
+        
         //Get the token just created above
         $tokenData = DB::table('password_resets')
             ->where('email', $request->email)->first();
-
-        if ($this->sendResetEmail($request->email, $tokenData->token)) {
-            return redirect()->back()->with('status', trans('A reset link has been sent to your email address.'));
-        } else {
-            return redirect()->back()->withErrors(['error' => trans('A Network Error occurred. Please try again.')]);
+          $sentmail= $this->sendResetEmail($request->email, $tokenData->token);
+            
+        if ($sentmail){
+            return redirect()->back()->with('success','A reset link has been sent to your email address.');
+        } 
+        else {
+            return redirect()->back()->with('error','A Network Error occurred. Please try again.');
 
         }
+
    }
-}
+
     private function sendResetEmail($email, $token)
             {
             //Retrieve the user from the database
@@ -66,7 +69,7 @@ class ResetPasswordController extends Controller
                     return false;
                 }
             }
-           
+
 
        
 
