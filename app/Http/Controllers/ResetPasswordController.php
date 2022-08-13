@@ -5,34 +5,88 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Illuminate\Support\Carbon;
-use Validator;
-use Auth;
-use DB;
-use Hash;
 
 
 class ResetPasswordController extends Controller
 {
 
-    public function admin()
+    public function passwordResetForm()
     {
-        return view('reset_password');
+        return view('password.reset_password_link');
     }
 
- 
-    public function passwordreset(Request $request){
+
+     public function newPasswordForm($token)
+    {
+        return view('password.reset_password', ['token' => $token]);
+    }
+
+
+ //sending password reset link
+    public function sendPasswordResetLink(Request $request){
+
+        $request->validate(['email' => 'required|email']);
+
         $user =User::whereEmail($request->email)->first();
 
         if ($user == null) {
             return redirect()->back()->with(['error'=>'Sorry, the Email Address does not exist.']);
         }
 
+        else{  
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
         
-        //Create Password Reset Token
+        if ($status) {
+            return redirect()->back()->with('success', 'password reset link has been sent to your email. thank you.');
+        }
+
+        else{
+           return redirect()->back()->with('error', 'A network Error occurred.please try again');
+        }
+
+         }
+    }
+
+
+        //Saving the new password in Database
+
+         public function Resetpassword(Request $request){
+              $request->validate([
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed',
+        ]);
+     
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+     
+                $user->save();
+     
+                event(new PasswordReset($user));
+            }
+        );
+     
+        return $status === Password::PASSWORD_RESET
+                    ? redirect()->route('login')->with('status', __($status))
+                    : back()->withErrors(['email' => [__($status)]]);
+
+        }
+
+/*    $schedule->command('auth:clear-resets')->everyFifteenMinutes();*/
+
+       /* //Create Password Reset Token
         DB::table('password_resets')->insert([
             'email' => $request->email,
             'token' =>  Str::random(60),
@@ -44,7 +98,7 @@ class ResetPasswordController extends Controller
         $tokenData = DB::table('password_resets')
             ->where('email', $request->email)->first();
           $sentmail= $this->sendResetEmail($request->email, $tokenData->token);
-            
+            dd($sentmail);
         if ($sentmail){
             return redirect()->back()->with('success','A reset link has been sent to your email address.');
         } 
@@ -71,9 +125,9 @@ class ResetPasswordController extends Controller
             }
 
 
-       
 
-        public function resetPassword(Request $request)
+
+        public function createPassword(Request $request)
         {
             //Validate input
             $validator = Validator::make($request->all(), [
@@ -114,6 +168,6 @@ class ResetPasswordController extends Controller
                 return redirect()->back()->withErrors(['email' => trans('A Network Error occurred. Please try again.')]);
             }
 
-        }
+        }*/
 
 }

@@ -67,8 +67,13 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
 /* Admin Area */
 Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/admin/login', [App\Http\Controllers\LoginController::class, 'admin'])->name('login');
-  Route::get('/admin/passwordreset', [App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('passwordreset');
-  Route::post('/admin/passwordreset', [App\Http\Controllers\ResetPasswordController::class, 'passwordreset'])->name('passwordreset');
+  
+  Route::get('/admin/passwordresetlink', [App\Http\Controllers\ResetPasswordController::class, 'passwordResetForm'])->name('passwordresetlink');
+  Route::post('/admin/passwordresetlink', [App\Http\Controllers\ResetPasswordController::class, 'sendPasswordResetLink'])->name('password.reset');
+
+
+  Route::get('/admin/newpassword/{token}', [App\Http\Controllers\ResetPasswordController::class, 'newPasswordForm'])->name('newpassword');
+  Route::post('/admin/newpassword', [App\Http\Controllers\ResetPasswordController::class, 'Resetpassword'])->name('newpassword');
 
    /* posting files */
    Route::post('/admin/login', [App\Http\Controllers\ValidationController::class, 'checklogin'])->name('login.checklogin');
