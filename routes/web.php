@@ -71,7 +71,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
    Route::post('/admin/login', [App\Http\Controllers\ValidationController::class, 'checklogin'])->name('login.checklogin');
 });
 
-Route::group(['prefix' => 'password', 'middleware' => 'guest'], function () {
+Route::group(['middleware' => 'web'], function () {
    Route::get('/resetpassword', [\App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('resetpassword');
    Route::post('/resetpassword', [\App\Http\Controllers\Api\ResetPasswordController::class, 'process'])->name('resetpassword.process');
    Route::get('/reset/{token}', [\App\Http\Controllers\ResetPasswordController::class, 'verify'])->name('reset.verify');
@@ -272,7 +272,7 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
    Route::post('/admin/propertyform', [App\Http\Controllers\AdminPropertySearchController::class, 'AdminPropertyInsert'])->name('propertyform');
 });
 
-/*Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
+Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
     if (auth()->check()) {
         $role = auth()->user()->role;
         switch ($role) {
@@ -289,15 +289,15 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
 
     return redirect()->route('home');
 
-})->name('dashboard');*/
+})->name('dashboard');
 
-/*Route::fallback(function () {
+Route::fallback(function () {
     Route::middleware(['web'])->domain('https://www.geohomesgroup.com')->group(function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
     });
 
     return redirect()->route('home');
-});*/
+});
 
 
 
