@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-use App\Models\{User, Password};
+use App\Models\User;
+use App\Models\Password;
 use App\Http\Controllers\Controller;
 use App\Mail\PasswordReset;
 use Illuminate\Support\Str;
