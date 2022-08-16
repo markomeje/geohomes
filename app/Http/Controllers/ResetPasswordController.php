@@ -6,7 +6,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
-use App\Models\Password;
+use App\Models\password;
 use App\Models\User;
 
 
