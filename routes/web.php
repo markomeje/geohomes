@@ -67,17 +67,16 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
 /* Admin Area */
 Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/admin/login', [App\Http\Controllers\LoginController::class, 'admin'])->name('login');
-  
-  Route::get('/admin/passwordresetlink', [App\Http\Controllers\ResetPasswordController::class, 'passwordResetForm'])->name('passwordresetlink');
-  Route::post('/admin/passwordresetlink', [App\Http\Controllers\ResetPasswordController::class, 'sendPasswordResetLink'])->name('password.reset');
-
-
-  Route::get('/admin/newpassword/{token}', [App\Http\Controllers\ResetPasswordController::class, 'newPasswordForm'])->name('newpassword');
-  Route::post('/admin/newpassword', [App\Http\Controllers\ResetPasswordController::class, 'Resetpassword'])->name('newpassword');
-
    /* posting files */
    Route::post('/admin/login', [App\Http\Controllers\ValidationController::class, 'checklogin'])->name('login.checklogin');
 });
+
+Route::group(['prefix' => 'password', 'middleware' => 'guest'], function () {
+   Route::get('/resetpassword', [\App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('resetpassword');
+   Route::post('/resetpassword', [\App\Http\Controllers\Api\ResetPasswordController::class, 'process'])->name('resetpassword.process');
+   Route::get('/reset/{token}', [\App\Http\Controllers\ResetPasswordController::class, 'verify'])->name('reset.verify');
+   Route::post('/reset', [\App\Http\Controllers\Api\ResetPasswordController::class, 'reset'])->name('password.reset');
+ });
 
 Route::middleware(['web','auth','manager'])->domain(env('APP_URL'))->group(function() {
    Route::post('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');

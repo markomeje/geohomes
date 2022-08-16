@@ -33,7 +33,7 @@
                 <!-- <small class="text-danger">{{$errors->first('user_email') }}</small> -->
                 <small class="text-danger">{{$errors->first('password') }}</small>
 
-                  <form role="form" method="POST" action="{{route('newpassword')}}" id="admin_form">
+                  <form role="form" method="POST" action="{{route('resetpassword')}}" id="admin_form">
                         
                     <label>Email</label>
                     <div class="mb-3">

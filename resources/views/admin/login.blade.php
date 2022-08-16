@@ -52,7 +52,7 @@
                     </div>
                   </form>
                   <div class="col-12 d-flex justify-content-center mt-4">
-                  <p><u><a href="{{route('passwordresetlink')}}">Reset Password</a></u></p>
+                  <p><u><a href="{{route('resetpassword')}}">Reset Password</a></u></p>
                 </div>
                 </div>
               </div>
