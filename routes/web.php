@@ -272,7 +272,7 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
    Route::post('/admin/propertyform', [App\Http\Controllers\AdminPropertySearchController::class, 'AdminPropertyInsert'])->name('propertyform');
 });
 
-Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
+/*Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
     if (auth()->check()) {
         $role = auth()->user()->role;
         switch ($role) {
@@ -289,7 +289,7 @@ Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
 
     return redirect()->route('home');
 
-})->name('dashboard');
+})->name('dashboard');*/
 
 /*Route::fallback(function () {
     Route::middleware(['web'])->domain('https://www.geohomesgroup.com')->group(function () {
