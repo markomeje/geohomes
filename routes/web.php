@@ -291,13 +291,13 @@ Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
 
 })->name('dashboard');
 
-Route::fallback(function () {
+/*Route::fallback(function () {
     Route::middleware(['web'])->domain('https://www.geohomesgroup.com')->group(function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
     });
 
     return redirect()->route('home');
-});
+});*/
 
 
 
