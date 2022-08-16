@@ -73,7 +73,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
 
 Route::group(['middleware' => 'web'], function () {
    Route::get('/resetpassword', [\App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('resetpassword');
-   Route::post('/resetpassword', [\App\Http\Controllers\Api\ResetPasswordController::class, 'process'])->name('resetpassword.process');
+   Route::post('/resetpassword', [\App\Http\Controllers\Api\ResetPasswordController::class, 'process'])->name('resetpassword');
    Route::get('/reset/{token}', [\App\Http\Controllers\ResetPasswordController::class, 'verify'])->name('reset.verify');
    Route::post('/reset', [\App\Http\Controllers\Api\ResetPasswordController::class, 'reset'])->name('password.reset');
  });
