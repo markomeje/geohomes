@@ -32,7 +32,7 @@ public function Resetpasswordlink(Request $request)
         $request->only('email')
     );
 
-    dd($status);
+ 
 
     return $status === Password::RESET_LINK_SENT
                 ? back()->with(['status' => __($status)])
