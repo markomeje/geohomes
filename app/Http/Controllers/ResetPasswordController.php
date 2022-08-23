@@ -10,7 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Mail;
-use \App\Mail\Mailer;
+use App\Mail\Mailer;
 
 
 class ResetPasswordController extends Controller
