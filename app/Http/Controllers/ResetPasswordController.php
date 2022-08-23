@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Mail;
 
 
 
@@ -58,8 +59,8 @@ class ResetPasswordController extends Controller
             $link = config('base_url') . 'password/reset/' . $token . '?email=' .$user->email;
             
                 try {
-
-                //Here send the link with CURL with an external email API 
+                //Here send the link with CURL with an external email API
+                 Mail::to($request->Auth()->user()->email)->send($link); 
                     return true;
                 } catch (\Exception $e) {
                     return false;
