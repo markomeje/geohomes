@@ -10,7 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Mail;
-use App\Mail\Mailer;
+use \App\Mail\Mailer;
 
 
 class ResetPasswordController extends Controller
@@ -47,7 +47,7 @@ class ResetPasswordController extends Controller
         'title' => 'Password reset link from Geohomes',
         'body' => $tokenData,
     ];
-    $sendmail=Mail::to($request->email)->send(new Mailer($maildetails));
+    $sendmail=Mail::to($request->email)->send(new \App\Mail\Mailer($maildetails));
 
         if ($sendmail) {
             return redirect()->back()->with('success', trans('A reset link has been sent to your email address.'));
