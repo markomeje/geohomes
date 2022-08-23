@@ -10,7 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Mail;
-
+use \App\Mail\Mailer;
 
 
 class ResetPasswordController extends Controller
@@ -42,15 +42,21 @@ class ResetPasswordController extends Controller
         //Get the token just created above
         $tokenData = DB::table('password_resets')
             ->where('email', $request->email)->first();
-        
-        if ($this->sendResetEmailtoken($request->email, $tokenData->token)) {
+
+         $maildetails = [
+        'title' => 'Password reset link from Geohomes',
+        'body' => $tokenData,
+    ];
+    $sendmail=Mail::to($request->email)->send(new Mailer($maildetails));
+
+        if ($sendmail) {
             return redirect()->back()->with('success', trans('A reset link has been sent to your email address.'));
         } else {
             return redirect()->back()->withErrors(['error' => trans('A Network Error occurred. Please try again.')]);
         }
 
     }
-        private function sendResetEmailtoken($email, $token)
+       /* private function sendResetEmailtoken($email, $token)
             {
             //Retrieve the user from the database
             $user = DB::table('users')->where('email', $email)->select('email')->first();
@@ -59,18 +65,13 @@ class ResetPasswordController extends Controller
             $link = config('base_url') . 'password/reset/' . $token . '?email=' .$user->email;
             
                 try {
-                //Here send the link with CURL with an external email API
-                 /*Mail::to($request->email)->send($link); */
-                 $data = array('name'=>"Geohomes");
-              Mail::send(['text'=>'Geohomes'],$data, function($message) {
-                 $message->to($request->email, $link )->subject
-                    ('Password Reset');
-              });
+
+                //Here send the link with CURL with an external email API 
                     return true;
                 } catch (\Exception $e) {
                     return false;
                 }
-            }
+            }*/
       
     
 
