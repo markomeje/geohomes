@@ -47,9 +47,8 @@ class ResetPasswordController extends Controller
         'title' => 'Password reset link from Geohomes',
         'body' => $tokenData,
     ];
-    $sendmail=Mail::to($request->email)->send(new mailer($maildetails));
-
-        if ($sendmail) {
+    
+        if (Mail::to($request->email)->send(new mailer($maildetails))) {
             return redirect()->back()->with('success', trans('A reset link has been sent to your email address.'));
         } else {
             return redirect()->back()->withErrors(['error' => trans('A Network Error occurred. Please try again.')]);

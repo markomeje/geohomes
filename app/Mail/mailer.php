@@ -11,6 +11,8 @@ class mailer extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $maildetails;
+
     /**
      * Create a new message instance.
      *
