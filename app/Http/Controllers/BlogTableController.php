@@ -10,9 +10,9 @@ class BlogTableController extends Controller
     //
       public function admin()
     {
-        $fetch = DB::table('blogs')->paginate(8);
-         $blog = json_decode(json_encode($fetch ), true);
-        return view('blog_table', ['blog'=>$fetch]);
+        $blogs = DB::table('blogs')->paginate(8);
+         $blog = json_decode(json_encode($blogs), true);
+        return view('blog_table', ['blog'=>$blogs]);
     }
     
     
@@ -27,5 +27,6 @@ class BlogTableController extends Controller
        else{
         return back()->with('error', 'Record was not deleted. please try Again.');
        }
+
   }
 }

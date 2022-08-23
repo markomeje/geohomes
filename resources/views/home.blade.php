@@ -72,7 +72,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="experience">
                                     <span style="color:#0EA15F;">454 m</span>
-                                    <p>Delivery Packages</p>
+                                    <p>Properties Sold</p>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">

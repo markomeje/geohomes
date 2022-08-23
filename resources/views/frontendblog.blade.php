@@ -28,9 +28,9 @@
             <div class="container">
                 <div class="row">
                    
-                   @if(empty($blogs))
+                   @if(empty($blog))
                       <div class="alert alert-warning col-lg-12 text-center">
-                        <strong>No Blog Available Yet.</strong>
+                        <strong style="color:#0ea15f;">Please be patient, the post will be available soon. Thank you.</strong>
                       </div>
                      @else
                       @foreach($blogs as $row)

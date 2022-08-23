@@ -28,7 +28,9 @@ class ResetPasswordController extends Controller
         //You can add validation login here
         $user = DB::table('users')->where('email', '=', $request->email)
             ->first();
-
+            if($user == null){
+                return redirect(route('resetpassword'))->with('error', "Sorry, your email is not valid.");
+            }
         //Create Password Reset Token
         DB::table('password_resets')->insert([
             'email' => $request->email,
@@ -40,22 +42,23 @@ class ResetPasswordController extends Controller
         $tokenData = DB::table('password_resets')
             ->where('email', $request->email)->first();
 
-        if ($this->sendResetEmail($request->email, $tokenData->token)) {
+        if ($this->sendResetEmailtoken($request->email, $tokenData->token)) {
             return redirect()->back()->with('success', trans('A reset link has been sent to your email address.'));
         } else {
             return redirect()->back()->withErrors(['error' => trans('A Network Error occurred. Please try again.')]);
         }
 
     }
-        private function sendResetEmail($email, $token)
+        private function sendResetEmailtoken($email, $token)
             {
             //Retrieve the user from the database
             $user = DB::table('users')->where('email', $email)->select('email')->first();
 
             //Generate, the password reset link. The token generated is embedded in the link
-            $link = config('base_url') . 'password/reset/' . $token . '?email=' . urlencode($user->email);
-
+            $link = config('base_url') . 'password/reset/' . $token . '?email=' .$user->email;
+            
                 try {
+
                 //Here send the link with CURL with an external email API 
                     return true;
                 } catch (\Exception $e) {

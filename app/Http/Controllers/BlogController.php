@@ -10,10 +10,10 @@ class BlogController extends Controller
 {
      public function index()
     {
-        $fetch = DB::table('blogs')->paginate(8);
+        $blog = DB::table('blogs')->paginate(8);
 
-         $blogs = json_decode(json_encode($fetch ), true);
-        return view('frontendblog', ['blogs'=>$fetch]);
+         $blogs = json_decode(json_encode($blog ), true);
+        return view('frontendblog', ['blogs'=>$blog]);
     }
 
     public function blogdetail($id)

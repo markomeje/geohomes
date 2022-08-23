@@ -3377,6 +3377,7 @@ hr {
   margin: 0 auto;
   left: 0;
   right: 0;
+  
 }
 
 /* line 114, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_headerMenu.scss */
@@ -8765,4 +8766,5 @@ position:absolute;
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color:#212529;
-}     
+}  
+ 

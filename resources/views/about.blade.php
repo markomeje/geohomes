@@ -48,7 +48,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="experience">
                                     <span style="color:#0EA15F;">454 m</span>
-                                    <p>Delivery Packages</p>
+                                    <p>Properties Sold</p>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
@@ -193,18 +193,18 @@
                             <span class="element" style="background-color:#0EA15F;">From News</span>
                             <h2>News & Media center</h2>
                             <p>We collect and analyze information about your general usage of the website products services and courses.</p>
-                            <a href="blog_details.html" class="all-btn" style="color:#0EA15F;">View All</a>
+                            <a href="{{ route('blogs') }}" class="all-btn" style="color:#0EA15F;">View All</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/home-blog1.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxery3.jpg" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>22 Apr 2020</p>
-                                    <h3><a href="blog_details.html">We might track your usage patterns to see</a></h3>
+                                    <h3><a href="{{ route('blogs') }}">Real Estate Developement</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -213,11 +213,11 @@
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/home-blog2.png" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxury-real-estate.jpg" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>22 Apr 2020</p>
-                                    <h3><a href="blog_details.html">The massive stadium screens at the MCG</a></h3>
+                                    <h3><a href="{{ route('blogs') }}">Customer's Satisfaction</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -226,6 +226,7 @@
             </div>
         </section>
         <!-- Blog Area End -->
+
  
  
    <script type="text/javascript">

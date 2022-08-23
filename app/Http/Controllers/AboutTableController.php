@@ -19,7 +19,7 @@ class AboutTableController extends Controller
     $delet=DB::delete('delete from about where id = ?',[$id]);
 
         if ($delet) {
-            return back()->with('success', 'Record deleted successfully');
+            return redirect()->back()->with('success', 'Record deleted successfully');
 
     }
 

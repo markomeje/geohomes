@@ -20,9 +20,10 @@
             <!-- feedback message ends here -->
 
             <!--- this code will show add button if content is empty -->
-            @if(empty($blog))
-            <div class="alert">
-              <p style="color:red; font-weight: bold;">Sorry, the table is empty</p>
+            @if(empty($blogs))
+
+            <div class="alert alert-danger col-3">
+              <p style="color:white;">No blog Created yet.</p>
             </div>
             <div>
               <a href="{{route('blogpost')}}" class=" font-weight-bold text-xs btn btn-primary" style="background-color: #0EA15F;">

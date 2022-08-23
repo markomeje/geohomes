@@ -32,7 +32,7 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="{{ route('home') }}">Home</a></li>
+                                                <li><a href="{{ route('home') }}" class="navbar-active">Home</a></li>
                                                 <li><a href="{{ route('about') }}">About</a></li>
 
                                                 <li><a href="#">Services</a>
