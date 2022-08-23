@@ -42,7 +42,7 @@ class ResetPasswordController extends Controller
         //Get the token just created above
         $tokenData = DB::table('password_resets')
             ->where('email', $request->email)->first();
-
+        
         if ($this->sendResetEmailtoken($request->email, $tokenData->token)) {
             return redirect()->back()->with('success', trans('A reset link has been sent to your email address.'));
         } else {
@@ -60,7 +60,12 @@ class ResetPasswordController extends Controller
             
                 try {
                 //Here send the link with CURL with an external email API
-                 Mail::to($request->Auth()->user()->email)->send($link); 
+                 /*Mail::to($request->email)->send($link); */
+                 $data = array('name'=>"Geohomes");
+              Mail::send(['text'=>'Geohomes'],$data, function($message) {
+                 $message->to($request->email, $link )->subject
+                    ('Password Reset');
+              });
                     return true;
                 } catch (\Exception $e) {
                     return false;
