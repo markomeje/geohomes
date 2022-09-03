@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,290 +14,283 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
 
-   Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+  Route::get('/', [App\Http\Controllers\frontend\HomeController::class, 'index'])->name('home');
 
-   Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
+  Route::get('/about', [App\Http\Controllers\frontend\AboutController::class, 'index'])->name('about');
 
-   Route::get('/affiliate', [App\Http\Controllers\AffiliateController::class, 'index'])->name('affiliate');
+  Route::get('/affiliate', [App\Http\Controllers\frontend\AffiliateController::class, 'index'])->name('affiliate');
 
-   Route::get('/blogs', [App\Http\Controllers\BlogController::class, 'index'])->name('blogs');
+  Route::get('/blogs', [App\Http\Controllers\frontend\BlogController::class, 'index'])->name('blogs');
 
-   Route::get('/blogdetail/{id}', [App\Http\Controllers\BlogController::class, 'blogdetail'])->name('blogdetail');
-   Route::get('/blogdetail/blogdetail/{id}', [App\Http\Controllers\BlogController::class, 'blogdetail'])->name('blogdetail');
+  Route::get('/blogdetail/{id}', [App\Http\Controllers\frontend\BlogController::class, 'blogdetail'])->name('blogdetail');
+  Route::get('/blogdetail/blogdetail/{id}', [App\Http\frontend\Controllers\BlogController::class, 'blogdetail'])->name('blogdetail');
 
-   Route::get('/application-form', [App\Http\Controllers\ApplicationController::class, 'index'])->name('application-form');
+  Route::get('/application-form', [App\Http\Controllers\frontend\ApplicationController::class, 'index'])->name('application-form');
 
-   Route::get('/constructions', [App\Http\Controllers\ConstructionController::class, 'index'])->name('constructions');
+  Route::get('/constructions', [App\Http\Controllers\frontend\ConstructionController::class, 'index'])->name('constructions');
+  Route::get('/book-inspection', [App\Http\Controllers\frontend\BookInspectionController::class, 'index'])->name('book-inspection');
 
-   Route::get('/book-inspection', [App\Http\Controllers\BookInspectionController::class, 'index'])->name('book-inspection');
+  Route::get('/cis-form', [App\Http\Controllers\frontend\CisFormController::class, 'index'])->name('cis-form');
 
-   Route::get('/cis-form', [App\Http\Controllers\CisFormController::class, 'index'])->name('cis-form');
+  Route::get('/contact', [App\Http\Controllers\frontend\ContactController::class, 'index'])->name('contact');
+  Route::post('/contact', [App\Http\Controllers\frontend\ContactController::class, 'Contactinsert'])->name('contact');
+  Route::get('/gallery', [App\Http\Controllers\frontend\GalleryController::class, 'index'])->name('gallery');
 
-   Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
-   Route::post('/contact', [App\Http\Controllers\ContactController::class, 'Contactinsert'])->name('contact');
-   Route::get('/gallery', [App\Http\Controllers\GalleryController::class, 'index'])->name('gallery');
+  Route::get('/consultancy', [App\Http\Controllers\frontend\ConsultancyController::class, 'index'])->name('consultancy');
 
-   Route::get('/consultancy', [App\Http\Controllers\ConsultancyController::class, 'index'])->name('consultancy');
+  Route::get('/lifting-form', [App\Http\Controllers\frontend\LiftingFormController::class, 'index'])->name('lifting-form');
 
-   Route::get('/lifting-form', [App\Http\Controllers\LiftingFormController::class, 'index'])->name('lifting-form');
+  Route::get('/consultants-form', [App\Http\Controllers\frontend\ConsultantsFormController::class, 'index'])->name('consultants-form');
 
-   Route::get('/consultants-form', [App\Http\Controllers\ConsultantsFormController::class, 'index'])->name('consultants-form');
+  Route::get('/estate-detail', [App\Http\Controllers\frontend\EstatedetailController::class, 'index'])->name('estate-detail');
 
-   Route::get('/estate-detail', [App\Http\Controllers\EstatedetailController::class, 'index'])->name('estate-detail');
+  Route::get('/our-work', [App\Http\Controllers\frontend\OurWorkController::class, 'index'])->name('our-work');
 
-   Route::get('/our-work', [App\Http\Controllers\OurWorkController::class, 'index'])->name('our-work');
+  Route::get('/our-estate', [App\Http\Controllers\frontend\OurEstateController::class, 'index'])->name('our-estate');
 
-   Route::get('/our-estate', [App\Http\Controllers\OurEstateController::class, 'index'])->name('our-estate');
+  Route::get('/site-form', [App\Http\Controllers\frontend\SiteFormController::class, 'index'])->name('site-form');
 
-   Route::get('/site-form', [App\Http\Controllers\SiteFormController::class, 'index'])->name('site-form');
+  Route::get('/property-form', [App\Http\Controllers\frontend\PropertySearchController::class, 'index'])->name('property-form');
 
-   Route::get('/property-form', [App\Http\Controllers\PropertySearchController::class, 'index'])->name('property-form');
+  Route::get('/real-estate', [App\Http\Controllers\frontend\RealEstateController::class, 'index'])->name('real-estate');
 
-   Route::get('/real-estate', [App\Http\Controllers\RealEstateController::class, 'index'])->name('real-estate');
-
-   Route::get('/career', [App\Http\Controllers\CareerController::class, 'index'])->name('career');
-   Route::get('/services', [App\Http\Controllers\ServicesController::class, 'index'])->name('services');
-   Route::get('/energys', [App\Http\Controllers\EnergyController::class, 'index'])->name('energys');
-   Route::get('/logistics', [App\Http\Controllers\LogisticController::class, 'index'])->name('logistics');
-   Route::get('/agricultures', [App\Http\Controllers\AgricultureController::class, 'index'])->name('agricultures');
-   Route::get('/minerals', [App\Http\Controllers\MineralController::class, 'index'])->name('minerals');
-   Route::get('/medicals', [App\Http\Controllers\MedicalController::class, 'index'])->name('medicals');
-
+  Route::get('/career', [App\Http\Controllers\frontend\CareerController::class, 'index'])->name('career');
+  Route::get('/services', [App\Http\Controllers\frontend\ServicesController::class, 'index'])->name('services');
+  Route::get('/energys', [App\Http\Controllers\frontend\EnergyController::class, 'index'])->name('energys');
+  Route::get('/logistics', [App\Http\Controllers\frontend\LogisticController::class, 'index'])->name('logistics');
+  Route::get('/agricultures', [App\Http\Controllers\frontend\AgricultureController::class, 'index'])->name('agricultures');
+  Route::get('/minerals', [App\Http\Controllers\frontend\MineralController::class, 'index'])->name('minerals');
+  Route::get('/medicals', [App\Http\Controllers\frontend\MedicalController::class, 'index'])->name('medicals');
+  Route::get('/resetpassword', [\App\Http\Controllers\frontend\ResetPasswordController::class, 'admin'])->name('resetpassword');
+  Route::post('/resetpassword', [App\Http\Controllers\frontend\ResetPasswordController::class ,'Resetpasswordlink'])->name('resetpassword');
+  Route::get('/admin/login', [App\Http\Controllers\frontend\LoginController::class, 'admin'])->name('login');
+  Route::post('/admin/login', [App\Http\Controllers\frontend\LoginController::class, 'checklogin'])->name('login.checklogin');
+  Route::post('/', [App\Http\Controllers\frontend\HomeController::class, 'NewsInsert'])->name('home');
+  Route::post('/', [App\Http\Controllers\frontend\ContactController::class, 'ContactInsert'])->name('home');
 });
 
-/* Admin Area */
-Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
-  Route::get('/admin/login', [App\Http\Controllers\LoginController::class, 'admin'])->name('login');
-   /* posting files */
-   Route::post('/admin/login', [App\Http\Controllers\ValidationController::class, 'checklogin'])->name('login.checklogin');
-});
-
-Route::group(['middleware' => 'web'], function () {
-   Route::get('/resetpassword', [\App\Http\Controllers\ResetPasswordController::class, 'admin'])->name('resetpassword');
-   Route::post('/resetpassword', [\App\Http\Controllers\ResetPasswordController::class, 'Resetpasswordlink'])->name('resetpassword');
-   Route::get('/reset/{token}', [\App\Http\Controllers\ResetPasswordController::class, 'verify'])->name('reset.verify');
-   Route::post('/reset', [\App\Http\Controllers\Api\ResetPasswordController::class, 'reset'])->name('password.reset');
- });
-
-Route::middleware(['web','auth','manager'])->domain(env('APP_URL'))->group(function() {
-   Route::post('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
-   Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'admin'])->name('dashboard');
-   Route::get('/admin/affiliates', [App\Http\Controllers\AffiliateTableController::class, 'admin'])->name('affiliates');
-   Route::get('/admin/booking', [App\Http\Controllers\BookingTableController::class, 'admin'])->name('booking');
-   Route::get('/admin/contacts', [App\Http\Controllers\ContactTableController::class, 'admin'])->name('contacts');
-   Route::get('/admin/cis', [App\Http\Controllers\CISTableController::class, 'admin'])->name('cis');
-   Route::get('/admin/psr', [App\Http\Controllers\PSRTableController::class, 'admin'])->name('property');
-   Route::get('/admin/inspection', [App\Http\Controllers\SiteInspectionTableController::class, 'admin'])->name('inspection');
-   Route::get('/admin/consultant', [App\Http\Controllers\ConsultantsTableController::class, 'admin'])->name('consultant');
-   Route::get('/admin/application', [App\Http\Controllers\ApplicationTableController::class, 'admin'])->name('application');
-   Route::get('/admin/portifolio', [App\Http\Controllers\PortifolioController::class, 'admin'])->name('portifolio');
-   Route::get('/admin/constructiontable', [App\Http\Controllers\ConstructionTableController::class, 'admin'])->name('constructiontable');
-   Route::get('/admin/consultancytable', [App\Http\Controllers\ConsultancyTableController::class, 'admin'])->name('consultancytable');
-   Route::get('/admin/estatetable', [App\Http\Controllers\EstateTableController::class, 'admin'])->name('estatetable');
-   Route::get('/admin/mineraltable', [App\Http\Controllers\MineralTableController::class, 'admin'])->name('mineraltable');
-   Route::get('/admin/medicaltable', [App\Http\Controllers\MedicalTableController::class, 'admin'])->name('medicaltable');
-   Route::get('/admin/agriculture', [App\Http\Controllers\AgricultureTableController::class, 'admin'])->name('agriculturetable');
-   Route::get('/admin/logistictable', [App\Http\Controllers\LogisticTableController::class, 'admin'])->name('logistictable');
-   Route::get('/admin/energy', [App\Http\Controllers\EnergyTableController::class, 'admin'])->name('energy');
-   Route::get('/admin/abouttable', [App\Http\Controllers\AboutTableController::class, 'admin'])->name('abouttable');
-
-   Route::get('/admin/blog', [App\Http\Controllers\BlogTableController::class, 'admin'])->name('blog');
-   Route::get('/admin/blogpost', [App\Http\Controllers\BlogPostController::class, 'admin'])->name('blogpost');
-});
 
 Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(function() {
-   Route::get('/admin/viewuser', [App\Http\Controllers\UserController::class, 'admin'])->name('viewuser');
-   Route::post('/admin/adduser', [App\Http\Controllers\ValidationController::class, 'adduser'])->name('adduser');
-   Route::post('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
-   Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'admin'])->name('dashboard');
-   Route::get('/admin/affiliates', [App\Http\Controllers\AffiliateTableController::class, 'admin'])->name('affiliates');
-   Route::get('/admin/booking', [App\Http\Controllers\BookingTableController::class, 'admin'])->name('booking');
-   Route::get('/admin/contacts', [App\Http\Controllers\ContactTableController::class, 'admin'])->name('contacts');
-   Route::get('/admin/cis', [App\Http\Controllers\CISTableController::class, 'admin'])->name('cis');
-   Route::get('/admin/psr', [App\Http\Controllers\PSRTableController::class, 'admin'])->name('property');
-   Route::get('/admin/inspection', [App\Http\Controllers\SiteInspectionTableController::class, 'admin'])->name('inspection');
-   Route::get('/admin/consultant', [App\Http\Controllers\ConsultantsTableController::class, 'admin'])->name('consultant');
-   Route::get('/admin/application', [App\Http\Controllers\ApplicationTableController::class, 'admin'])->name('application');
-   Route::get('/admin/portifolio', [App\Http\Controllers\PortifolioController::class, 'admin'])->name('portifolio');
-   Route::get('/admin/constructiontable', [App\Http\Controllers\ConstructionTableController::class, 'admin'])->name('constructiontable');
-   Route::get('/admin/consultancytable', [App\Http\Controllers\ConsultancyTableController::class, 'admin'])->name('consultancytable');
-   Route::get('/admin/estatetable', [App\Http\Controllers\EstateTableController::class, 'admin'])->name('estatetable');
-   Route::get('/admin/mineraltable', [App\Http\Controllers\MineralTableController::class, 'admin'])->name('mineraltable');
-   Route::get('/admin/medicaltable', [App\Http\Controllers\MedicalTableController::class, 'admin'])->name('medicaltable');
-   Route::get('/admin/agriculture', [App\Http\Controllers\AgricultureTableController::class, 'admin'])->name('agriculturetable');
-   Route::get('/admin/logistictable', [App\Http\Controllers\LogisticTableController::class, 'admin'])->name('logistictable');
-   Route::get('/admin/energy', [App\Http\Controllers\EnergyTableController::class, 'admin'])->name('energy');
-   Route::get('/admin/abouttable', [App\Http\Controllers\AboutTableController::class, 'admin'])->name('abouttable');
-   Route::get('/admin/addenergy', [App\Http\Controllers\AddEnergyController::class, 'admin'])->name('addenergy');
-   Route::get('/admin/addlogistic', [App\Http\Controllers\AddLogisticController::class, 'admin'])->name('addlogistic');
-   Route::get('/admin/addmedical', [App\Http\Controllers\AddmedicalController::class, 'admin'])->name('addmedical');
-   Route::get('/admin/addmineral', [App\Http\Controllers\AddMineralController::class, 'admin'])->name('addmineral');
-   Route::get('/admin/addagriculture', [App\Http\Controllers\AddAgricultureController::class, 'admin'])->name('addagriculture');
-   Route::get('/admin/addabout', [App\Http\Controllers\AddAboutController::class, 'admin'])->name('addabout');
+  
+  Route::post('/admin/logout', [App\Http\Controllers\admin\LogoutController::class, 'logout'])->name('logout');
+  Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'admin'])->name('dashboard');
 
-   Route::get('/admin/siteform', [App\Http\Controllers\AdminSiteFormController::class, 'admin'])->name('siteform');
+  Route::controller(App\Http\Controllers\admin\UserController::class)->group(function () {
+    Route::get('/admin/viewuser', 'admin')->name('viewuser');
+    Route::post('/admin/adduser', 'adduser')->name('adduser');
+     Route::post('/admin/updateuser','Update')->name('updateuser');
+    Route::post('/admin/viewuser/{id}','delete')->name('delete');
+  });
+  Route::controller(App\Http\Controllers\admin\AffiliateTableController::class)->group(function () {
+    Route::get('/admin/affiliates', 'admin')->name('affiliates');
+    Route::get('/admin/editaffiliate/{id}', 'editForm')->name('editaffiliate/{id}');
+    Route::post('/admin/editaffiliate/{id}', 'Edit')->name('editaffiliate/{id}');
+    Route::post('/admin/affiliate/{id}','delete')->name('delete');
+ });
 
-   Route::get('/admin/propertyform', [App\Http\Controllers\AdminPropertySearchController::class, 'admin'])->name('propertyform');
-   Route::get('/admin/consultantform', [App\Http\Controllers\AdminConsultantsFormController::class, 'admin'])->name('consultantform');
-   Route::get('/admin/bookinspection', [App\Http\Controllers\AdminBookInspectionController::class, 'admin'])->name('bookinspection');
-
-   Route::get('/admin/cisform', [App\Http\Controllers\AdminCisFormController::class, 'admin'])->name('cisform');
-   Route::get('/admin/applicationforms', [App\Http\Controllers\AdminApplicationController::class, 'admin'])->name('applicationforms');
-
-   Route::get('/admin/blog', [App\Http\Controllers\BlogTableController::class, 'admin'])->name('blog');
-   Route::get('/admin/blogpost', [App\Http\Controllers\BlogPostController::class, 'admin'])->name('blogpost');
-   Route::get('/admin/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('/admin/login');
-   Route::get('/admin/addportifolio', [App\Http\Controllers\AddPortifolioController::class, 'admin'])->name('addportifolio');
-   Route::get('/admin/addconstruction', [App\Http\Controllers\AddConstructionController::class, 'admin'])->name('addconstruction');
-   Route::get('/admin/addconsultancy', [App\Http\Controllers\AddConsultancyController::class, 'admin'])->name('addconsultancy');
-   Route::get('/admin/addestate', [App\Http\Controllers\AddEstateController::class, 'admin'])->name('addestate');
+  Route::controller(App\Http\Controllers\admin\BookingTableController::class)->group(function () {
+    Route::get('/admin/booking', 'admin')->name('booking');
+    Route::get('/admin/bookinspection', 'BookingForm')->name('bookinspection');
+    Route::post('/admin/bookinspection','InsertBookingForm')->name('bookinspection');
+    Route::get('/admin/viewbooking/{id}', 'viewBooking')->name('viewbooking/{id}');
+    Route::get('/admin/editbooking/{id}', 'editForm')->name('editbooking/{id}');
+    Route::post('/admin/editbooking/{id}', 'Edit')->name('editbooking/{id}');
+    Route::post('/admin/booking/{id}', 'delete')->name('delete');
+  });
 
 
+  Route::controller(App\Http\Controllers\admin\ContactTableController::class)->group(function () {
+    Route::get('/admin/contacts', 'admin')->name('contacts');
+    Route::get('/admin/editcontact/{id}', 'editForm')->name('editcontact/{id}');
+    Route::post('/admin/editcontact{id}', 'Edit')->name('editcontact/{id}');
+    Route::post('/admin/contact/{id}', 'delete')->name('delete');
 
-   Route::post('/admin/application/{id}', [App\Http\Controllers\ApplicationTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/cis/{id}', [App\Http\Controllers\CISTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/affiliate/{id}', [App\Http\Controllers\AffiliateTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/consultants/{id}', [App\Http\Controllers\ConsultantsTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/inspection/{id}', [App\Http\Controllers\SiteInspectionTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/propertysearch/{id}', [App\Http\Controllers\PSRTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/booking/{id}', [App\Http\Controllers\BookingTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/contact/{id}', [App\Http\Controllers\ContactTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/blogpost/{id}', [App\Http\Controllers\BlogTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/portifolio/{id}', [App\Http\Controllers\PortifolioController::class, 'delete'])->name('delete');
-   Route::post('/admin/constructiontable/{id}', [App\Http\Controllers\ConstructionTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/consultancytable/{id}', [App\Http\Controllers\ConsultancyTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/estatetable/{id}', [App\Http\Controllers\EstateTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/energy/{id}', [App\Http\Controllers\EnergyTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/logistic/{id}', [App\Http\Controllers\LogisticTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/medical/{id}', [App\Http\Controllers\MedicalTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/mineral/{id}', [App\Http\Controllers\MineralTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/agriculture/{id}', [App\Http\Controllers\AgricultureTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/about/{id}', [App\Http\Controllers\AboutTableController::class, 'delete'])->name('delete');
+  });
 
-   Route::post('/admin/application/{id}', [App\Http\Controllers\ApplicationTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/affiliate/{id}', [App\Http\Controllers\AffiliateTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/contact/{id}', [App\Http\Controllers\ContactTableController::class, 'delete'])->name('deletes');
-   Route::post('/admin/booking/{id}', [App\Http\Controllers\BookingTableController::class, 'delete'])->name('delete');
-   Route::post('/admin/consultants/{id}', [App\Http\Controllers\ConsultantsTableController::class, 'delete'])->name('delete');
+  Route::controller(App\Http\Controllers\admin\CISTableController::class)->group(function () {
+    Route::get('/admin/cis', 'admin')->name('cis');
+    Route::get('/admin/cisform', 'CISForm')->name('cisform');
+    Route::post('/admin/cisform','CisInsert')->name('cisform');
+    Route::get('/admin/viewcis/{id}','viewCIS')->name('viewcis/{id}');
+    Route::get('/admin/editcis/{id}', 'editForm')->name('editcis/{id}');
+    Route::post('/admin/editcis/{id}', 'Edit')->name('editcis/{id}');
+    Route::post('/admin/cis/{id}', 'delete')->name('delete');
+  });
 
+  Route::controller(App\Http\Controllers\admin\PSRTableController::class)->group(function () {
+    Route::get('/admin/psr', 'admin')->name('property');
+    Route::get('/admin/propertyform', 'PSRForm')->name('propertyform');
+    Route::post('/admin/propertyform', 'InsertPSR')->name('propertyform');
+    Route::get('/admin/viewproperty/{id}', 'viewPSRT')->name('viewproperty/{id}');
+    Route::get('/admin/editproperty/{id}', 'editForm')->name('editproperty/{id}');
+    Route::post('/admin/editproperty/{id}', 'Edit')->name('editproperty/{id}');
+    Route::post('/admin/propertysearch/{id}', 'delete')->name('delete');
+  });
 
-   Route::get('/admin/viewabout/{id}', [App\Http\Controllers\Edit\AboutEditController::class, 'view'])->name('viewabout/{id}');
-   Route::get('/admin/viewapplication/{id}', [App\Http\Controllers\Edit\ApplicationFormEditController::class, 'view'])->name('viewapplication/{id}');
-   Route::get('/admin/viewconsultant/{id}', [App\Http\Controllers\Edit\ConsultantFormEditController::class, 'view'])->name('viewconsultant/{id}');
-   Route::get('/admin/viewinspection/{id}', [App\Http\Controllers\Edit\SiteFormEditController::class, 'view'])->name('editsiteinspection/{id}');
-   Route::get('/admin/viewbooking/{id}', [App\Http\Controllers\Edit\BookingFormEditController::class, 'view'])->name('viewbooking/{id}');
-   Route::get('/admin/viewcis/{id}', [App\Http\Controllers\Edit\CisFormEditController::class, 'view'])->name('viewcis/{id}');
-   Route::get('/admin/viewproperty/{id}', [App\Http\Controllers\Edit\PropertyFormEditController::class, 'view'])->name('editproperty/{id}');
-   Route::get('/admin/viewconstruction/{id}', [App\Http\Controllers\Edit\ConstructionEditController::class, 'view'])->name('viewconstruction/{id}');
-   Route::get('/admin/viewconsultancy/{id}', [App\Http\Controllers\Edit\ConsultancyEditController::class, 'view'])->name('viewconsultancy');
-   Route::get('/admin/viewenergy/{id}', [App\Http\Controllers\Edit\EnergyEditController::class, 'view'])->name('viewenergy');
-   Route::get('/admin/viewestate/{id}', [App\Http\Controllers\Edit\EstateEditController::class, 'view'])->name('viewestate');
-   Route::get('/admin/viewagriculture/{id}', [App\Http\Controllers\Edit\AgricultureEditController::class, 'view'])->name('viewagriculture/{id}');
-   Route::get('/admin/viewmedical/{id}', [App\Http\Controllers\Edit\MedicalEditController::class, 'view'])->name('viewmedical/{id}');
-   Route::get('/admin/viewmineral/{id}', [App\Http\Controllers\Edit\MineralEditController::class, 'view'])->name('viewmineral/{id}');
-   Route::get('/admin/viewlogistic/{id}', [App\Http\Controllers\Edit\LogisticEditController::class, 'view'])->name('viewlogistic/{id}');
-   Route::get('/admin/viewportifolio/{id}', [App\Http\Controllers\Edit\PortifolioEditControllor::class, 'view'])->name('viewportifolio/{id}');
-   Route::get('/admin/viewblog/{id}', [App\Http\Controllers\Edit\BlogEditController::class, 'view'])->name('viewblog/{id}');
-   Route::get('/admin/editabout/{id}', [App\Http\Controllers\Edit\AboutEditController::class, 'edit'])->name('editabout/{id}');
-   Route::get('/admin/editconstruction/{id}', [App\Http\Controllers\Edit\ConstructionEditController::class, 'edit'])->name('editconstruction/{id}');
-   Route::get('/admin/editconsultancy/{id}', [App\Http\Controllers\Edit\ConsultancyEditController::class, 'edit'])->name('editconsultancy');
-   Route::get('/admin/editestate/{id}', [App\Http\Controllers\Edit\EstateEditController::class, 'edit'])->name('editestate/{id}');
-   Route::get('/admin/editenergy/{id}', [App\Http\Controllers\Edit\EnergyEditController::class, 'edit'])->name('editenergy');
-   Route::get('/admin/editagriculture/{id}', [App\Http\Controllers\Edit\AgricultureEditController::class, 'edit'])->name('editagriculture/{id}');
-   Route::get('/admin/editmedical/{id}', [App\Http\Controllers\Edit\MedicalEditController::class, 'edit'])->name('editmedical/{id}');
-   Route::get('/admin/editmineral/{id}', [App\Http\Controllers\Edit\MineralEditController::class, 'edit'])->name('editmineral/{id}');
-   Route::get('/admin/editlogistic/{id}', [App\Http\Controllers\Edit\LogisticEditController::class, 'edit'])->name('editlogistic/{id}');
-   Route::get('/admin/editapplication/{id}', [App\Http\Controllers\Edit\ApplicationFormEditController::class, 'edit'])->name('editapplication/{id}');
-
-   Route::get('/admin/editaffiliate/{id}', [App\Http\Controllers\Edit\AffiliateFormEditController::class, 'edit'])->name('editaffiliate/{id}');
-   Route::get('/admin/editbooking/{id}', [App\Http\Controllers\Edit\BookingFormEditController::class, 'edit'])->name('editbooking/{id}');
-   Route::get('/admin/editconsultant/{id}', [App\Http\Controllers\Edit\ConsultantFormEditController::class, 'edit'])->name('editconsultant/{id}');
-
-   Route::get('/admin/editcis/{id}', [App\Http\Controllers\Edit\CisFormEditController::class, 'edit'])->name('editcis/{id}');
-   Route::get('/admin/editcontact/{id}', [App\Http\Controllers\Edit\ContactEditController::class, 'edit'])->name('editcontact/{id}');
-   Route::get('/admin/editproperty/{id}', [App\Http\Controllers\Edit\PropertyFormEditController::class, 'edit'])->name('editproperty/{id}');
-   Route::get('/admin/editsiteinspection/{id}', [App\Http\Controllers\Edit\SiteFormEditController::class, 'edit'])->name('editsiteinspection/{id}');
-   Route::get('/admin/editportifolio/{id}', [App\Http\Controllers\Edit\PortifolioEditControllor::class, 'edit'])->name('editportifolio/{id}');
-   Route::get('/admin/editblog/{id}', [App\Http\Controllers\Edit\BlogEditController::class, 'edit'])->name('editblog/{id}');
-
-   Route::post('/admin/editportifolio/{id}', [App\Http\Controllers\Edit\PortifolioEditControllor::class, 'portifolioedit'])->name('editportifolio/{id}');
-   Route::post('/admin/editabout/{id}', [App\Http\Controllers\Edit\AboutEditController::class, 'AboutEdit'])->name('editabout/{id}');
-   Route::post('/admin/editconstruction/{id}', [App\Http\Controllers\Edit\ConstructionEditController::class, 'Constructionedit'])->name('editconstruction/{id}');
-   Route::post('/admin/editestate/{id}', [App\Http\Controllers\Edit\EstateEditController::class, 'EstateEdit'])->name('editestate/{id}');
-   Route::post('/admin/editenergy/{id}', [App\Http\Controllers\Edit\EnergyEditController::class, 'EnergyEdit'])->name('editenergy');
-   Route::post('/admin/editagriculture/{id}', [App\Http\Controllers\Edit\AgricultureEditController::class, 'agricultureEdit'])->name('editagriculture/{id}');
-   Route::post('/admin/editmedical/{id}', [App\Http\Controllers\Edit\MedicalEditController::class, 'MedicalEdit'])->name('editmedical/{id}');
-   Route::post('/admin/editmineral/{id}', [App\Http\Controllers\Edit\MineralEditController::class, 'MineralEdit'])->name('editmineral/{id}');
-   Route::post('/admin/editlogistic/{id}', [App\Http\Controllers\Edit\LogisticEditController::class, 'logisticEdit'])->name('editlogistic/{id}');
-   Route::post('/admin/editapplication/{id}', [App\Http\Controllers\Edit\ApplicationFormEditController::class, 'ApplicationEdit'])->name('editapplication/{id}');
-   Route::post('/admin/editaffiliate/{id}', [App\Http\Controllers\Edit\AffiliateFormEditController::class, 'AffiliateEdit'])->name('editaffiliate/{id}');
-   Route::post('/admin/editbooking/{id}', [App\Http\Controllers\Edit\BookingFormEditController::class, 'BookingEdit'])->name('editbooking/{id}');
-   Route::post('/admin/editconsultant/{id}', [App\Http\Controllers\Edit\ConsultantFormEditController::class, 'ConsultantEdit'])->name('editconsultant/{id}');
-   Route::post('/admin/editcis/{id}', [App\Http\Controllers\Edit\CisFormEditController::class, 'CisEdit'])->name('editcis/{id}');
-   Route::post('/admin/editcontact{id}', [App\Http\Controllers\Edit\ContactEditController::class, 'contactEdit'])->name('editcontact/{id}');
-   Route::post('/admin/editproperty/{id}', [App\Http\Controllers\Edit\PropertyFormEditController::class, 'PropertyformEdit'])->name('editproperty/{id}');
-   Route::post('/admin/editsiteinspection/{id}', [App\Http\Controllers\Edit\SiteFormEditController::class, 'SiteInspectionEdit'])->name('editsiteinspection/{id}');
-
-   Route::post('/admin/editconsultancy/{id}', [App\Http\Controllers\Edit\ConsultancyEditController::class, 'ConsultancyEdit'])->name('editconsultancy');
-   Route::post('/admin/editblog/{id}', [App\Http\Controllers\Edit\BlogEditController::class, 'blogEdit'])->name('editblog/{id}');
-   /* end of editing */
+  Route::controller(App\Http\Controllers\admin\SiteInspectionTableController::class)->group(function () {
+    Route::get('/admin/inspection', 'admin')->name('inspection');
+    Route::get('/admin/siteform', 'siteInpectionForm')->name('siteform');
+    Route::post('/admin/siteform','InsertSiteInspection')->name('siteform');
+    Route::get('/admin/viewinspection/{id}', 'viewInspectionTable')->name('viewinspection/{id}');
+    Route::get('/admin/editsiteinspection/{id}', 'editForm')->name('editsiteinspection/{id}');
+    Route::post('/admin/editsiteinspection/{id}', 'Edit')->name('editsiteinspection/{id}');
+    Route::post('/admin/inspection/{id}', 'delete')->name('delete');
+    });
 
 
+  Route::controller(App\Http\Controllers\admin\ApplicationTableController::class)->group(function () {
+    Route::get('/admin/application',  'admin')->name('application');
+    Route::get('/admin/applicationforms', 'ApplicationForm')->name('applicationforms');
+    Route::post('/admin/applicationforms','InsertApplicationForm')->name('applicationforms');
+    Route::post('/admin/editapplication/{id}', 'Edit')->name('editapplication/{id}');
+    Route::get('/admin/editapplication/{id}', 'editForm')->name('editapplication/{id}');
+    Route::post('/admin/application/{id}', 'delete')->name('delete');
+  });
 
-   Route::post('/admin/blogpost', [App\Http\Controllers\BlogPostController::class, 'BlogInsert'])->name('blogpost');
+  Route::controller(App\Http\Controllers\admin\ShopController::class)->group(function () {
+    Route::get('/admin/portifolio', 'admin')->name('portifolio');
+    Route::get('/admin/addportifolio', 'addShopForm')->name('addportifolio');
+    Route::post('/admin/addportifolio', 'PortifolioInsert')->name('addportifolio');
+    Route::get('/admin/editportifolio/{id}', 'editForm')->name('editportifolio/{id}');
+    Route::post('/admin/editportifolio/{id}','Edit')->name('editportifolio/{id}');
+    Route::get('/admin/viewportifolio/{id}', 'viewShop')->name('viewportifolio/{id}');
+    Route::post('/admin/portifolio/{id}', 'delete')->name('delete');
+  });
 
-   Route::post('/', [App\Http\Controllers\HomeController::class, 'NewsInsert'])->name('home');
-   Route::post('/', [App\Http\Controllers\ContactController::class, 'ContactInsert'])->name('home');
-   Route::post('/admin/addportifolio', [App\Http\Controllers\AddPortifolioController::class, 'PortifolioInsert'])->name('addportifolio');
-   Route::post('/admin/addconstruction', [App\Http\Controllers\AddConstructionController::class, 'ConstructionInsert'])->name('addconstruction');
-   Route::post('/admin/addconsultancy', [App\Http\Controllers\AddConsultancyController::class, 'ConsultancyInsert'])->name('addconsultancy');
-   Route::post('/admin/addenergy', [App\Http\Controllers\AddEnergyController::class, 'EnergyInsert'])->name('addenergy');
+  Route::controller(App\Http\Controllers\admin\ConstructionTableController::class)->group(function () {
+    Route::get('/admin/constructiontable', 'admin')->name('constructiontable');
+    Route::get('/admin/addconstruction', 'addConstructionForm')->name('addconstruction');
+    Route::post('/admin/addconstruction', 'ConstructionInsert')->name('addconstruction');
+    Route::post('/admin/editconstruction/{id}', 'Edit')->name('editconstruction/{id}');
+    Route::get('/admin/viewconstruction/{id}', 'viewConstruction')->name('viewconstruction/{id}');
+    Route::get('/admin/editconstruction/{id}', 'editForm')->name('editconstruction/{id}');
+    Route::post('/admin/constructiontable/{id}', 'delete')->name('delete');
+  });
+  Route::controller(App\Http\Controllers\admin\ConsultantsFormTableController::class)->group(function () {
+    Route::get('/admin/consultant', 'admin')->name('consultant');
+    Route::get('/admin/consultantform', 'ConsultantForm')->name('consultantform');
+    Route::post('/admin/consultantform','InsertConsultantForm')->name('consultantform');
+    Route::get('/admin/viewconsultant/{id}', 'viewConsultant')->name('viewconsultant/{id}');
+    Route::get('/admin/editconsultant/{id}', 'editForm')->name('editconsultant/{id}');
+    Route::post('/admin/editconsultant/{id}', 'Edit')->name('editconsultant/{id}');
+    Route::post('/admin/consultants/{id}', 'delete')->name('delete');
+  });
+  Route::controller(App\Http\Controllers\admin\ConsultancyPageTableController::class)->group(function () {
+    Route::get('/admin/consultancytable', 'admin')->name('consultancytable');
+    Route::get('/admin/addconsultancy', 'addConsultancyForm')->name('addconsultancy');
+    Route::post('/admin/addconsultancy', 'ConsultancyInsert')->name('addconsultancy');
+    Route::get('/admin/editconsultancy/{id}', 'editForm')->name('editconsultancy');
+    Route::post('/admin/editconsultancy/{id}', 'Edit')->name('editconsultancy');
+    Route::get('/admin/viewconsultancy/{id}', 'viewConsultancy')->name('viewconsultancy');
+    Route::post('/admin/consultancytable/{id}', 'delete')->name('delete');
+  });
 
-   Route::post('/admin/addestate', [App\Http\Controllers\AddEstateController::class, 'estateInsert'])->name('addestate');
-   Route::post('/admin/addlogistic', [App\Http\Controllers\AddLogisticController::class, 'LogisticInsert'])->name('addlogistic');
-   Route::post('/admin/addmedical', [App\Http\Controllers\AddMedicalController::class, 'MedicalInsert'])->name('addmedical');
-   Route::post('/admin/addmineral', [App\Http\Controllers\AddMineralController::class, 'MineralInsert'])->name('addmineral');
-   Route::post('/admin/addagriculture', [App\Http\Controllers\AddAgricultureController::class, 'AgricultureInsert'])->name('addagriculture');
-   Route::post('/admin/addabout', [App\Http\Controllers\AddAboutController::class, 'AboutInsert'])->name('addabout');
+  Route::controller(App\Http\Controllers\admin\EstateTableController::class)->group(function () {
+    Route::get('/admin/estatetable', 'admin')->name('estatetable');
+    Route::get('/admin/addestate', 'addEstateForm')->name('addestate');
+    Route::post('/admin/addestate', 'estateInsert')->name('addestate');
+    Route::post('/admin/editestate/{id}', 'Edit')->name('editestate/{id}');
+    Route::get('/admin/viewestate/{id}', 'viewEstate')->name('viewestate');
+    Route::get('/admin/editestate/{id}', 'editForm')->name('editestate/{id}');
+    Route::post('/admin/estatetable/{id}', 'delete')->name('delete');
+  });
+  Route::controller(App\Http\Controllers\admin\MineralTableController::class)->group(function () {
+    Route::get('/admin/mineraltable', 'admin')->name('mineraltable');
+    Route::get('/admin/addmineral',  'addMineralForm')->name('addmineral');
+    Route::post('/admin/editmineral/{id}', 'Edit')->name('editmineral/{id}');
+    Route::post('/admin/addmineral', 'MineralInsert')->name('addmineral');
+    Route::get('/admin/viewmineral/{id}', 'viewMineral')->name('viewmineral/{id}');
+    Route::get('/admin/editmineral/{id}','editForm')->name('editmineral/{id}');
+    Route::post('/admin/mineral/{id}', 'delete')->name('delete');
+  });
 
+  Route::controller(App\Http\Controllers\admin\MedicalTableController::class)->group(function () {
+    Route::get('/admin/medicaltable', 'admin')->name('medicaltable');
+    Route::get('/admin/addmedical', 'addMedicalForm')->name('addmedical');
+    Route::post('/admin/addmedical', 'MedicalInsert')->name('addmedical');
+    Route::post('/admin/editmedical/{id}', 'Edit')->name('editmedical/{id}');
+    Route::get('/admin/viewmedical/{id}', 'viewMedical')->name('viewmedical/{id}');
+    Route::get('/admin/editmedical/{id}','editForm')->name('editmedical/{id}');
+    Route::post('/admin/medical/{id}', 'delete')->name('delete');
+  });
 
-   /* admin Form Add Posting */
-   Route::post('/admin/consultantform',[App\Http\Controllers\AdminConsultantsFormController::class, 'AdminConsultantsInsert'])->name('consultantform');
+  Route::controller(App\Http\Controllers\admin\AgricultureTableController::class )->group(function () {
+    Route::get('/admin/agriculture', 'admin')->name('agriculturetable');
+    Route::get('/admin/addagriculture', 'addAgricultureForm')->name('addagriculture');
+    Route::post('/admin/addagriculture', 'AgricultureInsert')->name('addagriculture');
+    Route::post('/admin/editagriculture/{id}','Edit')->name('editagriculture/{id}');
+    Route::get('/admin/viewagriculture/{id}', 'viewAgriculture')->name('viewagriculture/{id}');
+    Route::get('/admin/editagriculture/{id}', 'editForm')->name('editagriculture/{id}');
+    Route::post('/admin/agriculture/{id}', 'delete')->name('delete');
+  });
 
-   Route::post('/admin/cisform',[App\Http\Controllers\AdminCisFormController::class, 'AdminCisInsert'])->name('cisform');
-   Route::post('/admin/bookinspection',[App\Http\Controllers\AdminBookInspectionController::class, 'AdminBookingsInsert'])->name('bookinspection');
+  Route::controller(App\Http\Controllers\admin\LogisticTableController::class)->group(function () {
+    Route::get('/admin/logistictable', 'admin')->name('logistictable');
+    Route::get('/admin/addlogistic',  'addLogisticForm')->name('addlogistic');
+    Route::post('/admin/addlogistic', 'LogisticInsert')->name('addlogistic');
+    Route::post('/admin/editlogistic/{id}', 'Edit')->name('editlogistic/{id}');
+    Route::get('/admin/viewlogistic/{id}', 'viewLogistic')->name('viewlogistic/{id}');
+    Route::get('/admin/editlogistic/{id}', 'editForm')->name('editlogistic/{id}');
+    Route::post('/admin/logistic/{id}', 'delete')->name('delete');
+  });
+  Route::controller(App\Http\Controllers\admin\EnergyTableController::class)->group(function () {
+    Route::get('/admin/energy', 'admin')->name('energy');
+    Route::get('/admin/addenergy', 'addEnergyForm')->name('addenergy');
+    Route::post('/admin/addenergy', 'EnergyInsert')->name('addenergy');
+    Route::post('/admin/editenergy/{id}', 'Edit')->name('editenergy');
+    Route::get('/admin/viewenergy/{id}', 'viewEnergy')->name('viewenergy');
+    Route::get('/admin/editenergy/{id}', 'editForm')->name('editenergy');
+    Route::post('/admin/energy/{id}', 'delete')->name('delete');
+  });
+  Route::controller(App\Http\Controllers\admin\AboutTableController::class)->group(function () {
+    Route::get('/admin/abouttable', 'admin')->name('abouttable');
+    Route::get('/admin/addabout',  'addAboutForm')->name('addabout');
+    Route::post('/admin/addabout', 'AboutInsert')->name('addabout');
+    Route::post('/admin/editabout/{id}', 'Edit')->name('editabout/{id}');
+    Route::get('/admin/viewabout/{id}', 'viewAbout')->name('viewabout/{id}');
+    Route::get('/admin/editabout/{id}', 'editForm')->name('editabout/{id}');
+    Route::post('/admin/about/{id}', 'delete')->name('delete');
 
-   Route::post('/admin/siteform',[App\Http\Controllers\AdminSiteFormController::class, 'AdminSiteInsert'])->name('siteform');
+  });
+   Route::controller(App\Http\Controllers\admin\BlogTableController::class)->group(function () {
+    Route::get('/admin/blog', ['admin'])->name('blog');
+    Route::get('/admin/blogpost', ['addBlogForm'])->name('blogpost');
+    Route::post('/admin/blogpost', ['BlogInsert'])->name('blogpost');
+    Route::get('/admin/editblog/{id}', ['editForm'])->name('editblog/{id}');
+    Route::post('/admin/editblog/{id}', ['Edit'])->name('editblog/{id}');
+    Route::get('/admin/viewblog/{id}', ['viewBlogTable'])->name('viewblog/{id}');
+    Route::post('/admin/blogpost/{id}', ['delete'])->name('delete');
 
-   Route::post('/admin/applicationforms',[App\Http\Controllers\AdminApplicationController::class, 'ApplicationInsert'])->name('applicationforms');
-   Route::post('/admin/propertyform', [App\Http\Controllers\AdminPropertySearchController::class, 'AdminPropertyInsert'])->name('propertyform');
+    
+  });
+
 });
 
 Route::middleware(['web', 'auth'])->get('/admin/dashboard', function () {
-    if (auth()->check()) {
-        $role = auth()->user()->role;
-        switch ($role) {
-            case 'manager':
-                $sudomain = 'manager';
-                break;
-            default:
-                $sudomain = 'admin';
-                break;
-        }
-
-        return redirect()->route("{$sudomain}.dashboard");
+  if (auth()->check()) {
+    $role = auth()->user()->role;
+    switch ($role) {
+      case 'manager':
+      $sudomain = 'manager';
+      break;
+      default:
+      $sudomain = 'admin';
+      break;
     }
 
-    return redirect()->route('home');
+    return redirect()->route("{$sudomain}.dashboard");
+  }
+
+  return redirect()->route('home');
 
 })->name('dashboard');
 
 Route::fallback(function () {
-    Route::middleware(['web'])->domain('https://www.geohomesgroup.com')->group(function () {
-        Route::get('/', [HomeController::class, 'index'])->name('home');
-    });
+  Route::middleware(['web'])->domain('https://www.geohomesgroup.com')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+  });
 
-    return redirect()->route('home');
+  return redirect()->route('home');
 });
 
 

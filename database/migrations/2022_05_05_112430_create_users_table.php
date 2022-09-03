@@ -17,7 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('email')->unique();
             $table->string('password');
-             $table->string('role');
+            $table->string('role');
+            $table->boolean('view')->default(0);
+            $table->boolean('create')->default(0);
+            $table->boolean('update')->default(0);
+            $table->boolean('delete')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -1,5 +1,5 @@
 
-@include('adminLayout.header')
+@include('updatelayout.header')
  <title>
    Geohomes | Login
   </title>
@@ -67,7 +67,7 @@
       </div>
     </section>
   </main>
-  @include('adminLayout.footer');
+  @include('updatelayout.footer');
 </body>
 
 </html>

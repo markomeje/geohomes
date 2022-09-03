@@ -29,27 +29,41 @@ class AuthServiceProvider extends ServiceProvider
 
         //
 
-        $allowed = ['superadmin', 'admin'];
-        Gate::define('view', function(User $user, $resource) use($allowed) {
-            $permissions = \App\Helpers\Permissions::get($user, $resource);
-            return in_array('view', $permissions) || in_array($user->role, $allowed);
+        Gate::define('view', function(User $user, ){
+           if ($user->view==1) {
+               return true;
+           }
+           else{
+            return false;
+           }
         });
 
-        Gate::define('create', function(User $user, $resource) use($allowed) {
-            $permissions = \App\Helpers\Permissions::get($user, $resource);
-            return in_array('create', $permissions) || in_array($user->role, $allowed);
+        Gate::define('create', function(User $user, ){
+           if ($user->create==1) {
+               return true;
+           }
+           else{
+            return false;
+           }
         });
 
-        Gate::define('update', function(User $user, $resource) use($allowed) {
-            $permissions = \App\Helpers\Permissions::get($user, $resource);
-            return in_array('update', $permissions) || in_array($user->role, $allowed);   
+        Gate::define('update', function(User $user, ){
+           if ($user->update==1) {
+               return true;
+           }
+           else{
+            return false;
+           }
         });
 
-        Gate::define('delete', function(User $user, $resource) use($allowed) {
-            $permissions = \App\Helpers\Permissions::get($user, $resource);
-            return in_array('delete', $permissions) || in_array($user->role, $allowed);   
+        Gate::define('delete', function(User $user, ){
+           if ($user->delete==1) {
+               return true;
+           }
+           else{
+            return false;
+           }
         });
-
       
     }
 }

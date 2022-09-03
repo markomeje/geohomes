@@ -1,8 +1,8 @@
-@include('updatelayout.header');
+@include('updatelayout.header')
  <title>
   about
   </title>
-         
+    @include('updatelayout.navbar')
           <!-- it gives feedback messages -->
            @if($message = Session::get('success'))
            <div class="alert ">

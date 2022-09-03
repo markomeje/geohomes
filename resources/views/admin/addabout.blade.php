@@ -1,4 +1,4 @@
-@include('updatelayout.header');
+@include('updatelayout.header')
  
  <title>
   Add About US
