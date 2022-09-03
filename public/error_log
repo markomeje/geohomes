@@ -1,0 +1,6 @@
+[16-Aug-2022 03:40:57 America/Boise] PHP Fatal error:  Uncaught Error: Class "Composer\Autoload\ComposerStaticInit573c4646a89e51e615dc4ffb928e0cc2" not found in /home1/geohomes/public_html/vendor/composer/autoload_real.php:32
+Stack trace:
+#0 /home1/geohomes/public_html/vendor/autoload.php(12): ComposerAutoloaderInit573c4646a89e51e615dc4ffb928e0cc2::getLoader()
+#1 /home1/geohomes/public_html/public/index.php(34): require('/home1/geohomes...')
+#2 {main}
+  thrown in /home1/geohomes/public_html/vendor/composer/autoload_real.php on line 32
