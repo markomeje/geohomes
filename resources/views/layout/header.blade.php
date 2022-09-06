@@ -5,13 +5,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/icon.ico">
-<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/assets/css/slicknav.css">
-     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+     
     <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/assets/css/slick.css">
-<link rel="stylesheet" href="/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/assets/css/nice-select.css">
    <link rel="stylesheet" href="/assets/css/themify-icons.css">
      <link rel="stylesheet" type="text/css" href="/assets/css/pignose.layerslider.css">
     
