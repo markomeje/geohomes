@@ -28,7 +28,7 @@
   </div>
   <!-- feedback message ends here -->
   @foreach($user as $row)
-  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" style="margin-right:100px !important;" >
+  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" style="padding:50px !important;" >
    <div class="card mt-4 mb-4 ml-4 " style="width:20rem; max-height:26rem; ">
     <ul class="list-group list-group-flush">
      <li class="list-group-item"> {{$row->email}}</li>
@@ -117,7 +117,6 @@
  <div class="modal-dialog">
   <div class="modal-content">
    <form class="form-contact contact_form" action="deleteuser/{{$row->id}}" method="POST" enctype="multipart/form-data" novalidate="novalidate">
-    <input type="hidden" name="id" value="{{$row->id}}">
     <div class="modal-body">
      <p>The User will be deleted completely. Do you wish to proceed?</p>
     </div>

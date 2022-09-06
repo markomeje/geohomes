@@ -41,14 +41,11 @@ class UserController extends Controller
     }
 
 
-     public function delete($id) {
-
-        $delet=DB::delete('delete from users where id = ?',[$id]);
-
-        if ($delet) {
 
      public function DeleteUser(Request $request,$id) {
-       $deleted=DB::delete('delete from users where id = ?',[$id]);
+        dd($id);
+       $deleted=DB::table('users')
+        ->where('id', '==', $id);
         if ($deleted) {
 
           return back()->with('success', 'User has been successfully deleted ');
@@ -59,6 +56,7 @@ class UserController extends Controller
           return back()->with('error', 'sorry,Your operation could not be completed. please try Again.');
         }
       }
+
 
      public function Update(Request $request)
  {
@@ -104,7 +102,6 @@ class UserController extends Controller
   }
  }
 
-}
 
 /* Functions for Access Grant To USER */
  public function GrantCreateAccess(Request $request,$id)

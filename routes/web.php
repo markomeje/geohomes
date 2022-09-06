@@ -80,8 +80,6 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
     Route::post('/admin/adduser', 'adduser')->name('adduser');
      Route::post('/admin/updateuser','Update')->name('updateuser');
 
-    Route::post('/admin/viewuser/{id}','delete')->name('delete');
-
     Route::post('/admin/deleteuser/{id}','DeleteUser')->name('deleteuser');
     /* Granting access to a user */
     Route::post('/admin/createAllow/{id}','GrantCreateAccess')->name('createAllow');
