@@ -99,7 +99,7 @@
      <p class="m-3 list-group-item"></p>
      <div class="card-footer d-flex justify-content-between" style="padding:15px;">
       <a class=" btn btn-success" href="" name="{{$row->id}}" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fas fa-edit" ></i></a>
-      <a  class=" btn btn-danger"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="deleteuser/{{$row->id}}"><i class="fas fa-trash"></i></a> 
+      <a  class=" btn btn-danger"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="deleteuser/{{$row->id}}" ><i class="fas fa-trash"></i></a> 
      </div>
     </ul>
    </div>
@@ -111,7 +111,7 @@
 
 
 
-<!-- Delete Modal -->
+<!-- Delete Modal
 @foreach($user as $row)
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
  <div class="modal-dialog">
@@ -128,7 +128,7 @@
   </div>
  </div>
 </div>
-@endforeach
+@endforeach -->
 
 <!-- Update user modal  -->
 @foreach($user as $row)
