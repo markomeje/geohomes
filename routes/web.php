@@ -76,10 +76,25 @@ Route::middleware(['web','auth','admin'])->domain(env('APP_URL'))->group(functio
   Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'admin'])->name('dashboard');
 
   Route::controller(App\Http\Controllers\admin\UserController::class)->group(function () {
-    Route::get('/admin/viewuser', 'admin')->name('viewuser');
+   Route::get('/admin/viewuser', 'admin')->name('viewuser');
     Route::post('/admin/adduser', 'adduser')->name('adduser');
      Route::post('/admin/updateuser','Update')->name('updateuser');
+
     Route::post('/admin/viewuser/{id}','delete')->name('delete');
+
+    Route::post('/admin/deleteuser/{id}','DeleteUser')->name('deleteuser');
+    /* Granting access to a user */
+    Route::post('/admin/createAllow/{id}','GrantCreateAccess')->name('createAllow');
+    Route::post('/admin/viewAllow/{id}','GrantViewAccess')->name('viewAllow');
+    Route::post('/admin/updateAllow/{id}','GrantUpdateAccess')->name('updateAllow');
+    Route::post('/admin/deleteAllow/{id}','GrantDeleteAccess')->name('deleteAllow');
+
+    /* Denying  access to a user Route*/
+    Route::post('/admin/createDeny/{id}','DenyCreateAccess')->name('createDeny');
+    Route::post('/admin/viewDeny/{id}','DenyViewAccess')->name('viewDeny');
+    Route::post('/admin/updateDeny/{id}','DenyUpdateAccess')->name('updateDeny');
+    Route::post('/admin/deleteDeny/{id}','DenyDeleteAccess')->name('deleteDeny');
+    /* The end Denying  access to a user Route*/
   });
   Route::controller(App\Http\Controllers\admin\AffiliateTableController::class)->group(function () {
     Route::get('/admin/affiliates', 'admin')->name('affiliates');
