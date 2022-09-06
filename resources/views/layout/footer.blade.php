@@ -159,8 +159,8 @@
     <!-- <script src="./assets/js/animated.headline.js"></script> -->
 
     <!-- Nice-select, sticky -->
- <!--    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script> -->
+ <!--    <script src="./assets/js/jquery.nice-select.min.js"></script>-->
+    <script src="./assets/js/jquery.sticky.js"></script> 
     
      <!-- Jquery Mobile Menu -->
     <script src="./assets/js/jquery.slicknav.min.js"></script>
