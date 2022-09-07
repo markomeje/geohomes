@@ -1,5 +1,5 @@
 
-@include('adminLayout.header')
+@include('updatelayout.header')
  <title>
    Geohomes | Create new password
   </title>
@@ -33,7 +33,7 @@
                 <!-- <small class="text-danger">{{$errors->first('user_email') }}</small> -->
                 <small class="text-danger">{{$errors->first('password') }}</small>
 
-                  <form role="form" method="POST" action="{{route('resetpassword')}}" id="admin_form">
+                  <form role="form" method="POST" action="{{route('createnewpassword')}}" id="admin_form">
                         
                     <label>Email</label>
                     <div class="mb-3">
@@ -47,15 +47,14 @@
                     </div>
                     <label>Confirm Password</label>
                     <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="password-addon" name="password_confirmation" required="password">
-                    </div> -->
+                      <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="password-addon" name="confirmpassword" required="password">
+                    </div>
+
+          
                     <div class="text-center">
                       <button type="submit" class="btn w-100 mt-4 mb-0" style="background-color:#0EA10F !important; color:black;">Reset Password</button>
                     </div>
                   </form>
-                   <div class="col-12 d-flex justify-content-center mt-4">
-                  <p><u><a href="{{route('login')}}">Login?</a></u></p>
-                </div>
                 </div>
               </div>
             </div>
@@ -69,7 +68,7 @@
       </div>
     </section>
   </main>
-  @include('adminLayout.footer');
+  @include('updatelayout.footer');
   <script type="text/javascript">
     $('div.alert').delay(5000).slideUp(500);
   </script>

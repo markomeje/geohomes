@@ -40,15 +40,6 @@
                       <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" name="email" required="email">
                        
                     </div>
-                   <!--  <label>Password</label>
-                    <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon" name="password" required="password">
-                       
-                    </div>
-                    <label>Confirm Password</label>
-                    <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="password-addon" name="password_confirmation" required="password">
-                    </div> -->
                     <div class="text-center">
                       <button type="submit" class="btn w-100 mt-4 mb-0" style="background-color:#0EA10F !important; color:black;">Send Link</button>
                     </div>

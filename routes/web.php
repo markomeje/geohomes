@@ -63,6 +63,9 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/medicals', [App\Http\Controllers\frontend\MedicalController::class, 'index'])->name('medicals');
   Route::get('/resetpassword', [\App\Http\Controllers\frontend\ResetPasswordController::class, 'admin'])->name('resetpassword');
   Route::post('/resetpassword', [App\Http\Controllers\frontend\ResetPasswordController::class ,'Resetpasswordlink'])->name('resetpassword');
+  Route::get('/createnewpassword', [\App\Http\Controllers\frontend\ResetPasswordController::class, 'NewPasswordForm'])->name('createnewpassword');
+  Route::post('/createnewpassword', [App\Http\Controllers\frontend\ResetPasswordController::class ,'CreateNewPassword'])->name('createnewpassword');
+
   Route::get('/admin/login', [App\Http\Controllers\frontend\LoginController::class, 'admin'])->name('login');
   Route::post('/admin/login', [App\Http\Controllers\frontend\LoginController::class, 'checklogin'])->name('login.checklogin');
   Route::post('/', [App\Http\Controllers\frontend\HomeController::class, 'NewsInsert'])->name('home');

@@ -43,7 +43,6 @@ class UserController extends Controller
 
 
      public function DeleteUser(Request $request,$id) {
-        dd($id);
        $deleted=DB::table('users')
         ->where('id', '==', $id);
         if ($deleted) {

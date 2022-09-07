@@ -3,10 +3,10 @@
 <h2>Dear {{ $data['email'] }}.</h2> 
 <p>Please click on the button below to reset your password.</p>
 
-<?php $url = route('reset.verify', ['token' => $data['token']]); ?>
+<?php $url = route('createnewpassword', ['token' => $data['token']]); ?>
 <div style="text-align: left;">
 	@component('mail::button', ['url' => $url])
-		Click Here
+		Click Here to proceed
 	@endcomponent
 </div>
 
