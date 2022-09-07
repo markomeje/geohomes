@@ -7,7 +7,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
-use App\Models\{User, Password};
+use App\Models\{User, password};
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -44,8 +44,8 @@ class ResetPasswordController extends Controller
 
         $token =Str::random(60);
         $email = $data['email'];
-        Password::where(['email' => $email])->delete();
-        Password::insert([
+        password::where(['email' => $email])->delete();
+        password::insert([
             'email' => $email, 
             'token' => $token,
             'duration' => 24, //24hours
