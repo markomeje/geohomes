@@ -109,8 +109,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                      <h3>Real Estate</h3>
-                                    <p>We leverage our breadth of asset classes, vertically integrated services, unique business
-                                model, and in-house development and management expertise.</p>
+                                    <p>We provide development services on all aspects of real estate development process such as data driven feasibility analysis, site selection...</p>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +123,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                    <h3>Construction</h3>
-                                    <p>We leverage our breadth of asset classes, vertically integrated services, unique business
-                                model, and in-house development and management expertise.</p>
+                                    <p>we provide technical knowledge and expertise to our clients in the construction and engineering industries, in order to ensure a secure, profitable and successful completion of their projects..</p>
                                 </div>
                             </div>
                         </div>
@@ -138,8 +136,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                    <h3>Energy</h3>
-                                    <p>We leverage our breadth of asset classes, vertically integrated services, unique business
-                                model, and in-house development and management expertise.</p>
+                                    <p>Our team of experts comprising of Engineers, Surveyors, Geologists and Scientists have incorporated groundbreaking and state of the art technologies to our energy operations and services..</p>
                                 </div>
                             </div>
                         </div>
@@ -159,45 +156,47 @@
             <div class="container">
 
                 <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
+                    <div class="col-xl-8 col-lg-10">
                         <div class="section-tittle text-center mb-100">
-                           <span class="element" style="background-color:#0EA15F;" >Features</span>
-                            <h2>To increase productivity and cost effectiveness on the market.</h2>
+                           <span class="element" style="background-color:#0EA15F;" >Core Values</span>
+                            <h2>What distinquishes us from others.</h2>
                         </div>
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-cat">
                             <div class="cat-cap">
-                                <h5><a href="#" style="color:#0EA15F;">Quality</a></h5>
-                                <p>We collect and analyze information about your general usage of the website, products, services, and courses.</p>
+                                <h5><a href="#" style="color:#0EA15F;"><i style="color: black !important " class="fa fa-brands fa fa-creative-commons p-2"></i>Innovation</a></h5>
+                                <p>We have completed various large scale construction projects such as bridges, roads, both onshore and offshore oil and gas facilities, telecommunication facilities, power plants, etc.</p>
+                                
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="single-cat ">
                             <div class="cat-cap">
-                                <h5><a href="#" style="color:#0EA15F;">Reliablity</a></h5>
-                                <p>We collect and analyze information about your general usage of the website, products, services, and courses.</p>
+                                <h5><a href="#" style="color:#0EA15F;"><i style="color: black !important " class="fa-regular fa-handshake"></i> Integrity & Trust</a></h5>
+                                <p>We offer consultancy services to clients who are in need of professional assistance as regards investing in various sectors such as the real estate sector. Our team of experts have successfully advised a wide range of clients including private developers, construction companies and property management companies</p>
+                                
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                         <div class="single-cat">
                             <div class="cat-cap">
-                                <h5><a href="#" style="color:#0EA15F;">Experience</a></h5>
-                                <p>We collect and analyze information about your general usage of the website, products, services, and courses.</p>
+                                  <h5><a href="#" style="color:#0EA15F;"><i class="fa-solid fa-person-dolly"></i>Quality & Excellent Service Delivery</a></h5>
+                                  <p>our team of experts comprising of Engineers, Surveyors, Geologists and Scientists have incorporated groundbreaking and state of the art technologies to our energy operations and services, in order to deliver the best possible results to our clients to meet the world’s emerging energy demands.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                         <div class="single-cat">
                             <div class="cat-cap">
-                                  <h5><a href="#" style="color:#0EA15F;">Manufacturing</a></h5>
-                                <p>We collect and analyze information about your general usage of the website, products, services, and courses.</p>
+                                <h5><a href="#" style="color:#0EA15F;"><i style="color: black !important " class="fa-regular fa-user-headset"></i>Customer Satisfaction</a></h5>
+                                <p>The major goal of our company acting in concert with our team of experts is to help our clients achieve and maintain a solid brand image, while ensuring that the value of your property is maximized with good investment returns and maintaining a successful and safe real estate space.</p>
                             </div>
                         </div>
                     </div>
