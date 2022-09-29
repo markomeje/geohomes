@@ -50,20 +50,20 @@
                                 <div class="col-sm-6 col-lg-12">
                                     <div class="form-group">
                                         <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                        <small class="text-danger">{{$errors->first('name') }}</small>
+                                        <span class="text-danger">{{$errors->first('name') }}</span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-12 ">
                                     <div class="form-group">
                                         <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                        <small class="text-danger">{{$errors->first('email') }}</small>
+                                        <span class="text-danger">{{$errors->first('email') }}</span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6  col-lg-12">
                                     <div class="form-group">
                                         <input class="form-control" name="phone" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'phone'" placeholder="Mobile Line">
-                                        <small class="text-danger">{{$errors->first('phone') }}</small>
+                                        <span class="text-danger">{{$errors->first('phone') }}</span>
                                     </div>
                                 </div>
                                  

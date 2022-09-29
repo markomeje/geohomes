@@ -52,25 +52,25 @@
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                         <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                        <small class="text-danger">{{$errors->first('name') }}</small>
+                                        <span class="text-danger">{{$errors->first('name') }}</span>
                                     </div>
                                 </div>
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                         <input class="form-control valid" name="middlename" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your middlename'" placeholder="Enter your middlename">
-                                        <small class="text-danger">{{$errors->first('middlename') }}</small>
+                                        <span class="text-danger">{{$errors->first('middlename') }}</span>
                                     </div>
                                 </div>
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                         <input class="form-control valid" name="surname" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your surname'" placeholder="Enter your surname">
-                                        <small class="text-danger">{{$errors->first('surname') }}</small>
+                                        <span class="text-danger">{{$errors->first('surname') }}</span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">
                                      <div class="form-group">
                                         <input class="form-control valid" name="phone" id="phone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Line'" placeholder="Mobile Line">
-                                        <small class="text-danger">{{$errors->first('phone') }}</small>
+                                        <span class="text-danger">{{$errors->first('phone') }}</span>
                                     </div>
                                 </div>
                                  
@@ -78,74 +78,74 @@
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                       <small class="text-danger">{{$errors->first('email') }}</small>
+                                       <span class="text-danger">{{$errors->first('email') }}</span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="residential" id="phone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Residential Address '" placeholder="Residential Address">
-                                       <small class="text-danger">{{$errors->first('residential') }}</small>
+                                       <span class="text-danger">{{$errors->first('residential') }}</span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="office" id="office" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Office Address'" placeholder="Office Address">
-                                       <small class="text-danger">{{$errors->first('office') }}</small>
+                                       <span class="text-danger">{{$errors->first('office') }}</span>
                                     </div>
                                 </div>
                                     <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="kin-name" id="Next of Kin`s FullName" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Next of Kin`s FullName'" placeholder="Next of Kin`s FullName">
-                                       <small class="text-danger">{{$errors->first('kin-name') }}</small>
+                                       <span class="text-danger">{{$errors->first('kin-name') }}</span>
                                     </div>
                                 </div>
                                     <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="kin-address" id="kin-address" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'kin address'" placeholder="Next of Kin`s Address">
-                                       <small class="text-danger">{{$errors->first('kin-address') }}</small>
+                                       <span class="text-danger">{{$errors->first('kin-address') }}</span>
                                     </div>
                                 </div>
                                     <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="kin-relation" id="kin-relation" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'kin relation'" placeholder="Relation With Next of Kin">
-                                       <small class="text-danger">{{$errors->first('kin-relation') }}</small>
+                                       <span class="text-danger">{{$errors->first('kin-relation') }}</span>
                                     </div>
                                 </div>
                                     <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="prepared-who" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Prepared By'" placeholder="Prepared By" >
-                                       <small class="text-danger">{{$errors->first('prepared-who') }}</small>
+                                       <span class="text-danger">{{$errors->first('prepared-who') }}</span>
                                     </div>
                                 </div>
                                  
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="account-name" id="account-name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'account name'" placeholder="Account Name" >
-                                       <small class="text-danger">{{$errors->first('account-name') }}</small>
+                                       <span class="text-danger">{{$errors->first('account-name') }}</span>
                                     </div>
                                 </div>
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="account-number" id="account-number" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'account number'" placeholder="Account Number" maxlength="10" minlength="10">
-                                       <small class="text-danger">{{$errors->first('account-number') }}</small>
+                                       <span class="text-danger">{{$errors->first('account-number') }}</span>
                                     </div>
                                 </div>
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="bank" id="bank" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'BanK'" placeholder="Bank " >
-                                       <small class="text-danger">{{$errors->first('bank') }}</small>
+                                       <span class="text-danger">{{$errors->first('bank') }}</span>
                                     </div>
                                 </div>
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="company-line" id="company-line" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'company line'" placeholder="Company Mobile line" >
-                                       <small class="text-danger">{{$errors->first('company-line') }}</small>
+                                       <span class="text-danger">{{$errors->first('company-line') }}</span>
                                     </div>
                                 </div>
                                  <div class="col-sm-6 col-md-6 col-lg-4 ">
                                     <div class="form-group">
                                        <input class="form-control valid" name="company-email" id="company-email" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'company email'" placeholder="Company Email">
-                                       <small class="text-danger">{{$errors->first('company-email') }}</small>
+                                       <span class="text-danger">{{$errors->first('company-email') }}</span>
                                     </div>
                                 </div>
                            <div class="col-sm-6 col-lg-8 submit-info mb-40">

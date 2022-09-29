@@ -21,20 +21,20 @@ class ApplicationController extends Controller
          //Validation //
          $data = request()->all();
         $validator = Validator::make($data, [  
-        'name' => ['required'],
-        'surname' => ['required'],
+        'name' => ['required','string'],
+        'surname' => ['required','string'],
         'phone' => ['required'],
          'email' => ['required','email'],
         'date_of_birth' => ['required'],
-        'gender' => ['required'],
+        'gender' => ['required','string'],
          'marital_status' => ['required'],
-        'state' => ['required'],
-        'country' => ['required'],
+        'state' => ['required','string'],
+        'country' => ['required','string'],
         'residential' => ['required'],
          'local_government_area' => ['required'],
-        'organization' => ['required'],
-         'office_address' => ['required'], 
-        'property_type' => ['required'], 
+        'organization' => ['required','string'],
+         'office_address' => ['required','string'], 
+        'property_type' => ['required','string'], 
         ]);
 
         if ($validator->fails()) {
