@@ -82,8 +82,28 @@
                                     <p style="color: black">{{$row->third_description}}</p>
                           
                          </div>
-                        
-                          <!-- Dropdown real Estate form-->
+                         <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                           <a href="{{route('book-inspection')}}" class="btn hero-btn mt-20" style="background:#0EA15F;" >Booking</a>
+                        </div>
+                         <div class="col-sm-12 col-md-6 col-lg-4 ">
+                           <a href="{{route('cis-form')}}" class="btn hero-btn mt-20" style="background:#0EA15F;" >CIS Form</a>
+                        </div>
+                         <div class="col-sm-12 col-md-6 col-lg-4 ">
+                           <a href="{{route('application-form')}}" class="btn hero-btn mt-20" style="background:#0EA15F;" >Application</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-sm-12 col-md-6 col-lg-4 ">
+                           <a href="{{route('property-form')}}" class="btn hero-btn mt-20" style="background:#0EA15F;" >Property Search</a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                           <a  href="{{route('site-form')}}" class="btn hero-btn mt-20" style="background:#0EA15F;" >Book Site Inspection</a>
+                        </div>
+                    </div>
+                       
+                         <!--  Dropdown real Estate form
                                 <div class="dropdown mt-0 mb-80">
                               <button class="dropbtn">Real Estate</button>
                             <div class="dropdown-content">
@@ -94,7 +114,7 @@
                             <a href="{{route('property-form')}}">Property Search</a>
                           </div>
                         </div>
-                          <!-- Dropdown real Estate form ends here-->
+                         Dropdown real Estate form ends here-->
                       </div>
                          <div class="col-lg-12 mt-40">
                         <nav class="blog-pagination justify-content-center d-flex">

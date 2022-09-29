@@ -17,7 +17,7 @@ class BookInspectionController extends Controller
 
     /* for Booking form submission */
 
-    public function BookingsInsert(Request $request){
+    public function BookingInsert(Request $request){
 
          $data = request()->all();
         $validator = Validator::make($data, [  

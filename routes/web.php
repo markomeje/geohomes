@@ -19,6 +19,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/about', [App\Http\Controllers\frontend\AboutController::class, 'index'])->name('about');
 
   Route::get('/affiliate', [App\Http\Controllers\frontend\AffiliateController::class, 'index'])->name('affiliate');
+  Route::post('/affiliate', [App\Http\Controllers\frontend\AffiliateController::class, 'AffiliateInsert'])->name('affiliate');
 
   Route::get('/blogs', [App\Http\Controllers\frontend\BlogController::class, 'index'])->name('blogs');
 
@@ -26,11 +27,14 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/blogdetail/blogdetail/{id}', [App\Http\frontend\Controllers\BlogController::class, 'blogdetail'])->name('blogdetail');
 
   Route::get('/application-form', [App\Http\Controllers\frontend\ApplicationController::class, 'index'])->name('application-form');
+  Route::post('/application-form', [App\Http\Controllers\frontend\ApplicationController::class, 'ApplicationInsert'])->name('application-form');
 
   Route::get('/constructions', [App\Http\Controllers\frontend\ConstructionController::class, 'index'])->name('constructions');
   Route::get('/book-inspection', [App\Http\Controllers\frontend\BookInspectionController::class, 'index'])->name('book-inspection');
+   Route::post('/book-inspection', [App\Http\Controllers\frontend\BookInspectionController::class, 'BookingInsert'])->name('book-inspection');
 
   Route::get('/cis-form', [App\Http\Controllers\frontend\CisFormController::class, 'index'])->name('cis-form');
+   Route::post('/cis-form', [App\Http\Controllers\frontend\CisFormController::class, 'CisInsert'])->name('cis-form');
 
   Route::get('/contact', [App\Http\Controllers\frontend\ContactController::class, 'index'])->name('contact');
   Route::post('/contact', [App\Http\Controllers\frontend\ContactController::class, 'Contactinsert'])->name('contact');
@@ -41,7 +45,7 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/lifting-form', [App\Http\Controllers\frontend\LiftingFormController::class, 'index'])->name('lifting-form');
 
   Route::get('/consultants-form', [App\Http\Controllers\frontend\ConsultantsFormController::class, 'index'])->name('consultants-form');
-
+Route::post('/consultants-form', [App\Http\Controllers\frontend\ConsultantsFormController::class, 'ConsultantsInsert'])->name('consultants-form');
   Route::get('/estate-detail', [App\Http\Controllers\frontend\EstatedetailController::class, 'index'])->name('estate-detail');
 
   Route::get('/our-work', [App\Http\Controllers\frontend\OurWorkController::class, 'index'])->name('our-work');
@@ -49,8 +53,10 @@ Route::middleware(['web'])->domain(env('APP_URL'))->group(function() {
   Route::get('/our-estate', [App\Http\Controllers\frontend\OurEstateController::class, 'index'])->name('our-estate');
 
   Route::get('/site-form', [App\Http\Controllers\frontend\SiteFormController::class, 'index'])->name('site-form');
+  Route::post('/site-form', [App\Http\Controllers\frontend\SiteFormController::class, 'SiteInsert'])->name('site-form');
 
   Route::get('/property-form', [App\Http\Controllers\frontend\PropertySearchController::class, 'index'])->name('property-form');
+  Route::post('/property-form', [App\Http\Controllers\frontend\PropertySearchController::class, 'propertyInsert'])->name('property-form');
 
   Route::get('/real-estate', [App\Http\Controllers\frontend\RealEstateController::class, 'index'])->name('real-estate');
 

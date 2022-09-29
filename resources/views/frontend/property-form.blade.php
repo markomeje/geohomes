@@ -7,7 +7,7 @@
       @include('layout.navbar')
     </header>
    <!--? Hero Start -->
-        <div class="slider-area2 section-bg2" data-background="assets/img/materials/property-banner.jpg">
+        <div class="slider-area2 section-bg2" data-background="/assets/img/materials/client-banner.jpg">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
@@ -46,7 +46,7 @@
                                       @endif
                                       <!-- feedback message ends here -->
 
-                        <form class="form-contact contact_form" action="#" method="POST" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="{{route('property-form')}}" method="POST" novalidate="novalidate">
                             <div class="row">
                                
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">

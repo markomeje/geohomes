@@ -24,26 +24,21 @@
 
         <div class="container">
                  <div class="row">
+                      @if(session()->has('success'))
+  <div class="alert alert-success">{{session()->get('success')}}</div>
+
+  @elseif(session()->has('error'))
+  <div class="alert alert-danger">{{session()->get('error')}}</div>
+  
+   @endif
                     <div class="col-12">
                         <h2 class="contact-title mt-30 padding-40" style="color:#0EA15F">Kindly, fill the form with correct detail.</h2>
                     </div>
                   </div>
 
-                          <!-- it gives feedback messages -->
-                                      @if($message = Session::get('success'))
-                                      <div class="alert">
-                                        <p style="color:#0EA10F;">{{$message}}</p>
-                                      </div>
-                                      @endif
+                         
 
-                                      @if($message = Session::get('error'))
-                                      <div class="alert">
-                                        <p style="color:red;">{{$message}}</p>
-                                      </div>
-                                      @endif
-                                      <!-- feedback message ends here -->
-
-                        <form class="form-contact contact_form" action="#" method="POST" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="{{route('cis-form')}}" method="POST" novalidate="novalidate">
                             <div class="row">
                                
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">

@@ -80,12 +80,12 @@ class ApplicationController extends Controller
             $submit= DB::table('applications')->insert($data);
 
         if ($submit) {
-            return back()->with('success', 'Sumission successful');
+            return redirect()->back()->with('success', 'Sumission successful');
 
     }
 
        else{
-        return back()->with('error', 'Submission Failed. please try Again.');
+        return redirect()->back()->with('error', 'Submission Failed. please try Again.');
        }
     }
   }

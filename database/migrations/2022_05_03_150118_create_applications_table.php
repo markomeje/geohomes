@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('DOB');
             $table->string('gender');
             $table->string('marital_status');
-            $table->string('residentail_address');
+            $table->string('residential_address');
             $table->string('state');
             $table->string('country');
             $table->string('LGA');

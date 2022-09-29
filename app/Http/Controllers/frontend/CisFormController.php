@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Validator;
 use Str;
+use Redirect;
 
 class CisFormController extends Controller
 {
@@ -83,15 +84,14 @@ class CisFormController extends Controller
             'agent_occupation' => $agent_occupation,
             'agent-office_address'=> $agent_office,  
         );
-            $submit= DB::table('cis')->insert($data);
-
-        if ($submit) {
-            return back()->with('success', 'Sumission successful');
+            $submitted= DB::table('cis')->insert($data);
+        if ($submitted) {
+            return redirect()->back()->with('success', 'Sumission successful');
 
     }
 
        else{
-        return back()->with('error', 'Submission Failed. please try Again.');
+        return redirect()->back()->with('error', 'Submission Failed. please try Again.');
        }
     }
   }

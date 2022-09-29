@@ -45,7 +45,7 @@
                     </div>
                      
                     <div class="col-lg-6">
-                <form class="form-contact contact_form" action="#" method="post" novalidate="novalidate">
+                <form class="form-contact contact_form" action="{{route('affiliate')}}" method="post" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-sm-6 col-lg-12">
                                     <div class="form-group">

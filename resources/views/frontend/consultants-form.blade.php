@@ -46,7 +46,7 @@
                                       @endif
                                       <!-- feedback message ends here -->
 
-                        <form class="form-contact contact_form" action="#" method="POST" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="{{route('consultants-form')}}" method="POST" novalidate="novalidate">
                             <div class="row">
                                
                                 <div class="col-sm-6 col-md-6 col-lg-4 ">

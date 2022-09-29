@@ -30,20 +30,20 @@
                   </div>
 
                           <!-- it gives feedback messages -->
-                                      @if($message = Session::get('success'))
-                                      <div class="alert">
-                                        <p style="color:#0EA10F;">{{$message}}</p>
-                                      </div>
-                                      @endif
+                                   <div>
+                                  @if(session()->has('success'))
+                                  <div class="alert alert-success">{{session()->get('success')}}</div>
 
-                                      @if($message = Session::get('first'))
-                                      <div class="alert">
-                                        <p style="color:red;">{{$message}}</p>
-                                      </div>
-                                      @endif
+                                  @elseif(session()->has('error'))
+                                  <div class="alert alert-danger">{{session()->get('error')}}</div>
+                                  
+                                   @endif
+
+                                </div>
+
                                       <!-- feedback message ends here -->
 
-                        <form class="form-contact contact_form" action="#" method="POST" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="{{route('application-form')}}" method="POST" novalidate="novalidate">
                             <div class="row">
                                
                                 <div class="col-sm-6 col-lg-6">
