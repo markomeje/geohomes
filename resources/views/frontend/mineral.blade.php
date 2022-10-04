@@ -1,5 +1,18 @@
      @include('layout.header')
 <title>GeoHomes | Mineral Production</title>
+
+<!-- Google tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-203737296-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-203737296-1');
+</script>
+<!-- end of google analytics code -->
+
 </head>
 
 <body>

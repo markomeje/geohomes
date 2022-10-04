@@ -2,6 +2,19 @@
 <title>GeoHomes | Gallery</title>
 <link rel="stylesheet" type="text/css" href="assets/css/gallery.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+<!-- Google tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-203737296-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-203737296-1');
+</script>
+<!-- end of google analytics code -->
+
 </head>
 <body>
  <!-- Header -->
