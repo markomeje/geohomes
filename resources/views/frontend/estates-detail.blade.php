@@ -21,7 +21,7 @@
     </header>
 <!-- Global Banner -->
     <section class="global-banner">
-        <img src="/assets/img/materials/house03.jpg" alt="">
+        <img src="/assets/img/materials/house03.jpg" alt="Estate Image">
         <h2 class="container">OakVilla</h2>
     </section>
     <!-- Global Banner End -->
@@ -33,23 +33,23 @@
             <div class="row mb-50">
                 <div class="col-lg-4">
                     <a href="/assets/img/materials/house01.jpg" data-lightbox="/assets/img">
-                        <img src="/assets/img/materials/house01.jpg" alt="">
+                        <img src="/assets/img/materials/house01.jpg" alt="Estate Image">
                     </a>
                 </div>
                 <div class="col-lg-4">
                     <a href="/assets/img/materials/house02.jpg" data-lightbox="/assets/img">
-                        <img src="/assets/img/materials/house02.jpg" alt="">
+                        <img src="/assets/img/materials/house02.jpg" alt="Estate Image">
                     </a>
                 </div>
                 <div class="col-lg-4">
                     <a href="/assets/img/materials/house03.jpg" data-lightbox="/assets/img">
-                        <img src="/assets/img/materials/house03.jpg" alt="">
+                        <img src="/assets/img/materials/house03.jpg" alt="Estate Image">
                     </a>
                 </div>
             </div>
              <div class="row mb-50">
                 <div class="col-lg-6">
-                    <img src="/assets/img/materials/house01.jpg" alt="">
+                    <img src="/assets/img/materials/house01.jpg" alt="Estate Image">
                 </div>
 
                 <div class="col-lg-6">
@@ -70,17 +70,17 @@
              <div class="row mb-50">
                 <div class="col-lg-4">
                     <a href="/assets/img/materials/house01.jpg" data-lightbox="/assets/img">
-                        <img src="/assets/img/materials/house01.jpg" alt="">
+                        <img src="/assets/img/materials/house01.jpg" alt="Estate Image">
                     </a>
                 </div>
                 <div class="col-lg-4">
                     <a href="/assets/img/materials/house02.jpg" data-lightbox="/assets/img">
-                        <img src="/assets/img/materials/house02.jpg" alt="">
+                        <img src="/assets/img/materials/house02.jpg" alt="Estate Image">
                     </a>
                 </div>
                 <div class="col-lg-4">
                     <a href="/assets/img/materials/house03.jpg" data-lightbox="/assets/img">
-                        <img src="/assets/img/materials/house03.jpg" alt="">
+                        <img src="/assets/img/materials/house03.jpg" alt="Estate Image">
                     </a>
                 </div>
             </div>

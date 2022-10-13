@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-md-12 ">
                         <div class="mt-40">
-                            <img src="{{ asset('assets/upload/medical_images/'.$row->image) }}" class="img-responsive img-fluid w-100" alt="" >
+                            <img src="{{ asset('assets/upload/medical_images/'.$row->image) }}" class="img-responsive img-fluid w-100" alt="Medical Image" >
                         </div>
                     </div>
                 </div>

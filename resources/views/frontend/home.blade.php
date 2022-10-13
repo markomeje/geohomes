@@ -25,7 +25,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="assets/img/logo/loder.png" alt="Geohomes images">
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
                     <div class="col-xl-5 col-lg-6 col-md-9 offset-md-1 offset-sm-1">
                         <div class="about-right-cap">
                             <div class="about-right-img">
-                                <img class="img-fluid img-responsive" id="image_change" src="/assets/img/materials/house02.jpg" alt="" onclick="stop();">
+                                <img class="img-fluid img-responsive" id="image_change" src="/assets/img/materials/house02.jpg" alt="Geohomes images" onclick="stop();">
                             </div>
                             <div class="img-cap" style="background-color:#0EA15F;">
                                 <span >20</span>
@@ -327,10 +327,10 @@
                         <div class="single-man-slider">
                             <div class="man-slider-active">
                                 <div class="single-mam-img">
-                                    <img class="img-fluid img-responsive" src="assets/img/materials/p04.jpg" alt="" >
+                                    <img class="img-fluid img-responsive" src="assets/img/materials/p04.jpg" alt="Geohomes images" >
                                 </div>
                                 <div class="single-mam-img">
-                                    <img class="img-fluid img-responsive" src="assets/img/materials/p04.jpg" alt="" >
+                                    <img class="img-fluid img-responsive" src="assets/img/materials/p04.jpg" alt="Geohomes images" >
                                 </div>
                             </div>
                         </div>
@@ -412,7 +412,7 @@
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxery3.jpg" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxery3.jpg" alt="Geohomes images">
                                 </div>
                                 <div class="blog-cap">
                                     <p>22 Apr 2020</p>
@@ -425,7 +425,7 @@
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxury-real-estate.jpg" alt="">
+                                    <img class="img-fluid img-responsive" src="assets/img/luxery/luxury-real-estate.jpg" alt="Geohomes images">
                                 </div>
                                 <div class="blog-cap">
                                     <p>22 Apr 2020</p>

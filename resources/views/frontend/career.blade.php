@@ -23,7 +23,7 @@
     </header>
 <!-- Global Banner -->
     <section class="global-banner">
-        <img src="/assets/img/materials/careers-banner.jpg" alt="">
+        <img src="/assets/img/materials/careers-banner.jpg" alt="Geohomes image">
         <h2 class="container">Careers At Geohomes</h2>
     </section>
     <!-- Global Banner End -->

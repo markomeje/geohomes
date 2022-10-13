@@ -7,6 +7,8 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../../admin/assets/img/apple-icon.png"> 
   <link rel="icon" type="image/png" href="/assets/img/logo/icon.ico">
   <!--     Fonts and icons     -->
+   <meta name="description" content="Geohomes is a Real Estate company">
+    <meta name="keywords" content="estate, land, properties,energy,mineral,minning,land survey,purchase,sell,buy,medical" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
   <link href="../../admin/assets/css/nucleo-icons.css" rel="stylesheet" />

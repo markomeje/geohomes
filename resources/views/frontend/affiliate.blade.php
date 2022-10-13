@@ -87,7 +87,7 @@
                     </div>
                         <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="singel-details-img mt-0">
-                            <img src="assets/img/materials/careers-banner.jpg" class="img-responsive img-fluid w-100" alt="">
+                            <img src="assets/img/materials/careers-banner.jpg" class="img-responsive img-fluid w-100" alt="Geohomes Image">
                         </div>
                     </div>
                     </div>

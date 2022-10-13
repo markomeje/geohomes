@@ -57,7 +57,7 @@
                     </div>
                          <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6">
                         <div class="singel-details-img mt-0">
-                            <img src="{{asset('assets/upload/estate_images/'.$row->first_image) }}" alt=""  class="img-responsive img-fluid w-100 img-thumbnail">
+                            <img src="{{asset('assets/upload/estate_images/'.$row->first_image) }}" alt="Esate Image"  class="img-responsive img-fluid w-100 img-thumbnail">
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6">
@@ -77,7 +77,7 @@
 
                      <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6">
                         <div class="singel-details-img mt-20">
-                            <img src="{{asset('assets/upload/estate_images/'.$row->second_image) }}" alt=""  class="img-responsive img-fluid w-100 img-thumbnail">
+                            <img src="{{asset('assets/upload/estate_images/'.$row->second_image) }}" alt="Esate Image"  class="img-responsive img-fluid w-100 img-thumbnail">
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6">
                         <div class="singel-details-img mt-20">
-                            <img src="{{asset('assets/upload/estate_images/'.$row->third_image) }}" alt=""  class="img-responsive img-fluid w-100 img-thumbnail">
+                            <img src="{{asset('assets/upload/estate_images/'.$row->third_image) }}" alt="Esate Image"  class="img-responsive img-fluid w-100 img-thumbnail">
                         </div>
                     </div>
                     

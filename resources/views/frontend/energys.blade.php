@@ -67,12 +67,12 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="singel-details-img mb-30">
-                                <img src="{{ asset('assets/upload/energy_images/'.$row->first_image) }}" class="img-responsive img-fluid w-100"alt="">
+                                <img src="{{ asset('assets/upload/energy_images/'.$row->first_image) }}" class="img-responsive img-fluid w-100"alt="Energy Image">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="singel-details-img mb-30">
-                                <img src="{{ asset('assets/upload/energy_images/'.$row->second_image) }}" class="img-responsive img-fluid w-100" alt="">
+                                <img src="{{ asset('assets/upload/energy_images/'.$row->second_image) }}" class="img-responsive img-fluid w-100" alt="Energy Image">
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6 col-md-12 ">
                         <div class="mt-40">
-                            <img src="assets/img/featured/energy05.jpg" class="img-responsive img-fluid w-100" alt="">
+                            <img src="assets/img/featured/energy05.jpg" class="img-responsive img-fluid w-100" alt="Energy Image">
                         </div>
                     </div>
                 </div>

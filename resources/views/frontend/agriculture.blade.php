@@ -1,4 +1,4 @@
-     @include('layout.header')
+F     @include('layout.header')
 <title>GeoHomes | Agriculture</title>
 
 <!-- Google tag (gtag.js) - Google Analytics -->
@@ -59,12 +59,12 @@
           
                     <div class="col-sm-12 col-lg-5 col-md-5">
                         <div class="singel-details-img mt-40">
-                            <img src="{{ asset('assets/upload/agriculture_images/'.$row->first_image) }}" class="img-responsive img-fluid w-100" alt="" >
+                            <img src="{{ asset('assets/upload/agriculture_images/'.$row->first_image) }}" class="img-responsive img-fluid w-100" alt="Agriculture" >
                         </div>
                     </div>
                     <div class="col-sm-12  col-lg-12 col-md-12">
                         <div class="singel-details-img mt-40">
-                            <img src="{{ asset('assets/upload/agriculture_images/'.$row->second_image) }}" class="img-responsive img-fluid w-100" alt="" >
+                            <img src="{{ asset('assets/upload/agriculture_images/'.$row->second_image) }}" class="img-responsive img-fluid w-100" alt="Agriculture" >
                         </div>
                     </div>
 

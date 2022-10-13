@@ -58,14 +58,14 @@
 
                     <div class="col-sm-12 col-xl-5 col-lg-5 col-md-5">
                         <div class="singel-details-img mt-40">
-                            <img src="{{ asset('assets/upload/construction_images/'.$row->first_image) }}" class="img-responsive img-fluid w-100" alt="">
+                            <img src="{{ asset('assets/upload/construction_images/'.$row->first_image) }}" class="img-responsive img-fluid w-100" alt="Construction image">
                         </div>
                     </div>
                     </div>
                 <div class="row">
                     <div class="col-sm-12 col-lg-12 col-md-12">
                         <div class="singel-details-img mb-40 pt-50 pb-50">
-                            <img src="{{ asset('assets/upload/construction_images/'.$row->second_image) }}" class="img-responsive img-fluid w-100"alt="">
+                            <img src="{{ asset('assets/upload/construction_images/'.$row->second_image) }}" class="img-responsive img-fluid w-100"alt="Construction image">
                         </div>
                     </div>
                 </div>

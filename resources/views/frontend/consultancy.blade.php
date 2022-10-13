@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6">
                         <div class="singel-details-img mt-40">
-                            <img src="{{ asset('assets/upload/consultancy_images/'.$row->firstimage) }} " class="img-responsive img-fluid w-100" alt="">
+                            <img src="{{ asset('assets/upload/consultancy_images/'.$row->firstimage) }} " class="img-responsive img-fluid w-100" alt="Consultancy Image">
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6">
                         <div class="singel-details-img mt-40">
-                            <img src="{{asset('assets/upload/consultancy_images/'.$row->secondimage) }}"  class="img-responsive img-fluid w-100"alt="">
+                            <img src="{{asset('assets/upload/consultancy_images/'.$row->secondimage) }}"  class="img-responsive img-fluid w-100"alt="Consultancy Image">
                         </div>
                     </div>
                     
