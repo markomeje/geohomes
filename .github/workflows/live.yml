@@ -15,7 +15,7 @@ jobs:
       run: composer install --prefer-dist --no-interaction
     
     - name: 📂 Sync files
-      uses: uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         ftp-server: ${{ secrets.GEOHOMES_FTP_SERVER }}
         ftp-username: ${{ secrets.GEOHOMES_FTP_USERNAME }}
